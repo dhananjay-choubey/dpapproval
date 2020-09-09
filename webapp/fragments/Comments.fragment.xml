@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<List width="100%" growing="false" growingThreshold="20" growingScrollToLoad="false" backgroundDesign="Solid"
+		items="{path:'CommentsSet', templateShareable:true}">
+		<items>
+			<FeedListItem icon="" sender="" text="{Comment}" info="{User}" timestamp=""/>
+		</items>
+	</List>
+</core:FragmentDefinition>
