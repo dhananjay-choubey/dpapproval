@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
-		class="sapUiResponsiveMargin" items="{path:'/RevenueSet', templateShareable:true}" visible="true">
+		items="{path:'/RevenueSet', templateShareable:true}" visible="true">
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
