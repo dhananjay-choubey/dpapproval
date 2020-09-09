@@ -3,10 +3,5 @@
 		maximumFileSize="10"
 		mimeType="image/jpeg,image/gif,image/png,text/plain,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 		multiple="false" uploadUrl="" sameFilenameAllowed="false" mode="SingleSelectMaster" uploadComplete="_onUploadCollectionUploadComplete"
-		change="_onUploadCollectionChange" typeMissmatch="_onUploadCollectionTypeMissmatch" fileSizeExceed="_onUploadCollectionFileSizeExceed">
-		<headerParameters/>
-		<items/>
-		<parameters/>
-		<toolbar/>
-	</UploadCollection>
+		change="_onUploadCollectionChange" typeMissmatch="_onUploadCollectionTypeMissmatch" fileSizeExceed="_onUploadCollectionFileSizeExceed"></UploadCollection>
 </core:FragmentDefinition>

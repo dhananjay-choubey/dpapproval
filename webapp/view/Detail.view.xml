@@ -1,55 +1,84 @@
-<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:footerbar="sap.ushell.ui.footerbar"
-	controllerName="com.rmz.dpapproval.controller.Detail">
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:core="sap.ui.core"
+	controllerName="com.rmz.dpapproval.controller.Detail" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
 	<Page id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}" busy="{detailView>/busy}"
 		busyIndicatorDelay="{detailView>/delay}">
 		<content>
-			<ObjectHeader id="objectHeader" title="{Name}" number="{ path: 'UnitNumber', formatter: '.formatter.currencyValue' }"
-				numberUnit="{UnitOfMeasure}"></ObjectHeader>
-			<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+			<layout:VerticalLayout width="100%" visible="true">
+				<layout:content>
+					<ObjectHeader intro="" title="{PurchaseOrder}" icon=""
+						number="{path: 'Value', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" numberUnit="{Currency}"
+						numberState="None" titleActive="true" backgroundDesign="Solid" condensed="false" visible="true" titlePress="_onObjectHeaderTitlePress">
+						<attributes>
+							<ObjectAttribute title="Creator" text="{CreatedByName}" active="true" visible="true" press="_onObjectAttributePress"/>
+							<ObjectAttribute title="Last Approver" text="{CreatedByID}" active="false" visible="true"/>
+						</attributes>
+						<statuses>
+							<ObjectStatus title="Created On" text="{path: 'CreationDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"
+								state="None" visible="true"/>
+							<ObjectStatus title="Version" text="{path: 'Version', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"
+								state="None" visible="true"/>
+						</statuses>
+					</ObjectHeader>
+				</layout:content>
+			</layout:VerticalLayout>
+			<IconTabBar expandable="true" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+				selectedKey="Ok">
 				<items>
-					<IconTabFilter id="iconTabBarFilter1" icon="sap-icon://hint" tooltip="{i18n>detailIconTabBarInfo}"></IconTabFilter>
-					<IconTabFilter id="iconTabBarFilter2" icon="sap-icon://attachment" tooltip="{i18n>detailIconTabBarAttachments}"></IconTabFilter>
+					<IconTabFilter icon="sap-icon://drill-up" iconColor="Default" text="Growth" count="" design="Vertical" enabled="true" showAll="false"
+						textDirection="Inherit" visible="true">
+						<content>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.GrowthMobile" type="XML"/>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.GrowthDesktop" type="XML"/>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://action-settings" iconColor="Positive" text="Development" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.DevelopmentForm" type="XML"/>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.DevelopmentMobile" type="XML"/>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.DevelopmentDesktop" type="XML"/>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://capital-projects" iconColor="Critical" text="Capital" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.CapitalMobile" type="XML"/>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.CapitalDesktop" type="XML"/>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://money-bills" iconColor="Negative" text="Revenue" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.RevenueMobile" type="XML"/>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.RevenueDesktop" type="XML"/>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://comment" iconColor="Default" text="Comments"
+						count="{path: 'NbNotes', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.Comments" type="XML"/>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://attachment" iconColor="Neutral" text="Attachments" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.Attachments" type="XML"/>
+						</content>
+					</IconTabFilter>
 				</items>
+				<content/>
 			</IconTabBar>
-			<Table id="lineItemsList" width="auto" items="{LineItems}" updateFinished="onListUpdateFinished"
-				noDataText="{i18n>detailLineItemTableNoDataText}" busyIndicatorDelay="{detailView>/lineItemTableDelay}" class="sapUiResponsiveMargin">
-				<headerToolbar>
-					<Toolbar id="lineItemsToolbar">
-						<Title id="lineItemsHeader" text="{detailView>/lineItemListTitle}"/>
-					</Toolbar>
-				</headerToolbar>
-				<columns>
-					<Column>
-						<Text text="{i18n>detailLineItemTableIDColumn}"/>
-					</Column>
-					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
-						<Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>
-					</Column>
-				</columns>
-				<items>
-					<ColumnListItem>
-						<cells>
-							<ObjectIdentifier title="{Name}" text="{LineItemID}"/>
-							<ObjectNumber number="{ path: 'UnitNumber', formatter: '.formatter.currencyValue' }" unit="{UnitOfMeasure}"/>
-						</cells>
-					</ColumnListItem>
-				</items>
-			</Table>
 		</content>
 		<footer>
-			<OverflowToolbar id="footerToolbar">
-				<ToolbarSpacer/>
-				<Button id="shareButton" tooltip="{i18n>shareTooltip}" icon="sap-icon://action" press="onSharePress">
-					<dependents>
-						<ActionSheet id="shareSheet" showCancelButton="true" placement="Top">
-							<buttons>
-								<Button id="shareEmail" icon="sap-icon://email" text="{i18n>shareSendEmail}" press="onShareEmailPress"/>
-								<Button id="shareInJam" icon="sap-icon://jam" text="{i18n>shareOnJamTitle}" press="onShareInJamPress" visible="{FLP>/isShareInJamActive}"/>
-								<footerbar:AddBookmarkButton id="shareTile" appData="{ path: 'detailView>/saveAsTileTitle', formatter: '.formatter.shareTileData' }"/>
-							</buttons>
-						</ActionSheet>
-					</dependents>
-				</Button>
+			<OverflowToolbar width="100%" height="auto" design="Auto" enabled="true" visible="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Approve" type="Accept" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+						press="_onApproveButtonPress"/>
+					<Button text="Reject" type="Reject" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+						press="_onRejectButtonPress1"/>
+				</content>
 			</OverflowToolbar>
 		</footer>
 	</Page>

@@ -2,7 +2,7 @@
 	<table:Table selectionMode="None" showNoData="true" fixedColumnCount="1" enableColumnFreeze="true" enableSelectAll="false"
 		showColumnVisibilityMenu="false" enableCellFilter="false" enableColumnReordering="false" visibleRowCountMode="Fixed"
 		rows="{path:'/RevenueSet', templateShareable:true}" enableBusyIndicator="true" fixedRowCount="0" alternateRowColors="true"
-		fixedBottomRowCount="0" visibleRowCount="5" visible="false">
+		fixedBottomRowCount="0" visibleRowCount="5" visible="true">
 		<!--  sap.ui.core.Control  -->
 		<table:columns>
 			<table:Column width="7rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
