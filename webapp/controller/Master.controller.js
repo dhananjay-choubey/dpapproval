@@ -307,6 +307,11 @@ sap.ui.define([
 			var oViewModel = this.getModel("masterView");
 			oViewModel.setProperty("/isFilterBarVisible", (this._oListFilterState.aFilter.length > 0));
 			oViewModel.setProperty("/filterBarLabel", this.getResourceBundle().getText("masterFilterBarText", [sFilterBarText]));
+		},
+		onObjectListItemPress: function (oEvent) {
+			if(Device.system.phone){
+				this._showDetail(oEvent.getSource());
+			}
 		}
 
 	});

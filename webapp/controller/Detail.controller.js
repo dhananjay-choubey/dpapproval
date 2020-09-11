@@ -2,8 +2,9 @@
 sap.ui.define([
 	"com/rmz/dpapproval/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
-	"com/rmz/dpapproval/model/formatter"
-], function (BaseController, JSONModel, formatter) {
+	"com/rmz/dpapproval/model/formatter",
+	"sap/ui/Device"
+], function (BaseController, JSONModel, formatter, Device) {
 	"use strict";
 
 	return BaseController.extend("com.rmz.dpapproval.controller.Detail", {
@@ -75,6 +76,35 @@ sap.ui.define([
 				});
 				this._bindView("/" + sObjectPath);
 			}.bind(this));
+			this._setFragmentVisibilities();
+		},
+		_setFragmentVisibilities: function (oEvent) {
+			if (Device.system.phone) {
+				if (!this._developmentContent) {
+					this._developmentContent = sap.ui.xmlfragment("com.rmz.dpapproval.fragments.DevelopmentMobile", this);
+				}
+				if (!this._capitalContent) {
+					this._capitalContent = sap.ui.xmlfragment("com.rmz.dpapproval.fragments.CapitalMobile", this);
+				}
+				if (!this._revenueContent) {
+					this._revenueContent = sap.ui.xmlfragment("com.rmz.dpapproval.fragments.RevenueMobile", this);
+				}
+			} else {
+				if (!this._developmentContent) {
+					this._developmentContent = sap.ui.xmlfragment("com.rmz.dpapproval.fragments.DevelopmentDesktop", this);
+				}
+				if (!this._capitalContent) {
+					this._capitalContent = sap.ui.xmlfragment("com.rmz.dpapproval.fragments.CapitalDesktop", this);
+				}
+				if (!this._revenueContent) {
+					this._revenueContent = sap.ui.xmlfragment("com.rmz.dpapproval.fragments.RevenueDesktop", this);
+				}
+			}
+			//Set content to icontabbar
+			this.getView().byId("devITFId").addContent(this._developmentContent);
+			this.getView().byId("capITFId").addContent(this._capitalContent);
+			this.getView().byId("revITFId").addContent(this._revenueContent);
+
 		},
 
 		/**

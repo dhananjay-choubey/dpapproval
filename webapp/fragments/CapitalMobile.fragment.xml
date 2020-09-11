@@ -118,7 +118,7 @@
 			</Column>
 		</columns>
 		<items>
-			<ColumnListItem type="Active">
+			<ColumnListItem type="Inactive">
 				<cells>
 					<Text text="{Tower}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{ConstructionFunding}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
