@@ -11,18 +11,28 @@
 		<content>
 			<PullToRefresh id="pullToRefresh" visible="{device>/support/touch}" refresh="onRefresh"/>
 			<!--  For client side filtering add this to the items attribute:  parameters: {operationMode: 'Client'}}"  -->
-			<List id="list" items="{ path: '/Objects', sorter: { path: 'Name', descending: false }, groupHeaderFactory: '.createGroupHeader' }"
-				busyIndicatorDelay="{masterView>/delay}" noDataText="{masterView>/noDataText}"
-				mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true" growingThreshold="10" growingScrollToLoad="true"
-				updateFinished="onUpdateFinished" selectionChange="onSelectionChange">
+			<List id="list" items="{path:'/DPHeaderDataSet', templateShareable:true}" busyIndicatorDelay="{masterView>/delay}"
+				noDataText="{masterView>/noDataText}" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true"
+				growingThreshold="10" growingScrollToLoad="true" updateFinished="onUpdateFinished" selectionChange="onSelectionChange">
 				<infoToolbar>
 					<Toolbar active="true" id="filterBar" visible="{masterView>/isFilterBarVisible}" press="onOpenViewSettings">
 						<Title id="filterBarLabel" text="{masterView>/filterBarLabel}"/>
 					</Toolbar>
 				</infoToolbar>
 				<items>
-					<ObjectListItem type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}" press="onSelectionChange" title="{Name}"
-						number="{ path: 'UnitNumber', formatter: '.formatter.currencyValue' }" numberUnit="{UnitOfMeasure}"></ObjectListItem>
+					<ObjectListItem intro="" title="{DPNumber}"
+						number="{path: 'Total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" numberUnit="INR CR" numberState="None"
+						type="Active" selected="true" showMarkers="false">
+						<attributes>
+							<ObjectAttribute title="Version" text="{Version}" active="false" visible="true"/>
+							<ObjectAttribute title="Creator" text="{CreatedByName}" active="false" visible="true"/>
+						</attributes>
+						<firstStatus>
+							<ObjectStatus title="Created" text="{path: 'CreationDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"
+								state="Success" visible="true"/>
+						</firstStatus>
+						<secondStatus/>
+					</ObjectListItem>
 				</items>
 			</List>
 		</content>

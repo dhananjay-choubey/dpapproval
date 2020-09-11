@@ -1,0 +1,451 @@
+[{
+	"DPNumber": "DPNumber 1",
+	"Version": "Version 1",
+	"WorkitemID": 9.85,
+	"TaskType": "TaskType 1",
+	"CreatedByID": "CreatedByID 1",
+	"CreatedByName": "CreatedByName 1",
+	"CreationDate": "/Date(967796240000)/",
+	"PreviousApproverName": "PreviousApproverName 1",
+	"PreConstStartDate": "/Date(1114244240000)/",
+	"PreConstEndDate": "/Date(1264148240000)/",
+	"LandArea": 416.31,
+	"ProjectGrossValue": 6671.92,
+	"EstdLiabilities": 2613.6,
+	"NetConsideration": 7960.43,
+	"OnSigning": 2584.86,
+	"OnPlanSanction": 5101.49,
+	"OtherMilestone1": 7638.68,
+	"OtherMilestone2": 100.85,
+	"TransactionCost": 8688.55,
+	"TransactionBrokerage": 9523.1,
+	"LegalConsultantFees": 8078.05,
+	"FinancialConsultantFees": 3324.62,
+	"StampDutyCost": 591.67,
+	"Others": 4853.71,
+	"Total": 4053.58,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%201')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%201')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%201')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%201')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 2",
+	"Version": "Version 2",
+	"WorkitemID": 7495.46,
+	"TaskType": "TaskType 2",
+	"CreatedByID": "CreatedByID 2",
+	"CreatedByName": "CreatedByName 2",
+	"CreationDate": "/Date(1509178640000)/",
+	"PreviousApproverName": "PreviousApproverName 2",
+	"PreConstStartDate": "/Date(1149149840000)/",
+	"PreConstEndDate": "/Date(1224663440000)/",
+	"LandArea": 7826.71,
+	"ProjectGrossValue": 3812,
+	"EstdLiabilities": 6152.62,
+	"NetConsideration": 7116.64,
+	"OnSigning": 3189.11,
+	"OnPlanSanction": 2884.41,
+	"OtherMilestone1": 6673.2,
+	"OtherMilestone2": 3050.52,
+	"TransactionCost": 2114.01,
+	"TransactionBrokerage": 865.68,
+	"LegalConsultantFees": 7131.28,
+	"FinancialConsultantFees": 4669.02,
+	"StampDutyCost": 5584.73,
+	"Others": 5582.16,
+	"Total": 9889.58,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%202')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%202')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%202')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%202')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 3",
+	"Version": "Version 3",
+	"WorkitemID": 2209.25,
+	"TaskType": "TaskType 3",
+	"CreatedByID": "CreatedByID 3",
+	"CreatedByName": "CreatedByName 3",
+	"CreationDate": "/Date(1190103440000)/",
+	"PreviousApproverName": "PreviousApproverName 3",
+	"PreConstStartDate": "/Date(1157703440000)/",
+	"PreConstEndDate": "/Date(1139213840000)/",
+	"LandArea": 9106.05,
+	"ProjectGrossValue": 5632.87,
+	"EstdLiabilities": 517.85,
+	"NetConsideration": 5272.55,
+	"OnSigning": 6084.72,
+	"OnPlanSanction": 3899.73,
+	"OtherMilestone1": 539.99,
+	"OtherMilestone2": 6592.09,
+	"TransactionCost": 3731.02,
+	"TransactionBrokerage": 9240,
+	"LegalConsultantFees": 7680,
+	"FinancialConsultantFees": 5575.25,
+	"StampDutyCost": 4212.82,
+	"Others": 2621.15,
+	"Total": 4078.77,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%203')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%203')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%203')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%203')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 4",
+	"Version": "Version 4",
+	"WorkitemID": 9244.63,
+	"TaskType": "TaskType 4",
+	"CreatedByID": "CreatedByID 4",
+	"CreatedByName": "CreatedByName 4",
+	"CreationDate": "/Date(1405325840000)/",
+	"PreviousApproverName": "PreviousApproverName 4",
+	"PreConstStartDate": "/Date(1301386640000)/",
+	"PreConstEndDate": "/Date(1516090640000)/",
+	"LandArea": 6336.84,
+	"ProjectGrossValue": 7555.63,
+	"EstdLiabilities": 9799.75,
+	"NetConsideration": 5976.94,
+	"OnSigning": 3090.44,
+	"OnPlanSanction": 1297.78,
+	"OtherMilestone1": 3101.81,
+	"OtherMilestone2": 9545.37,
+	"TransactionCost": 4880.84,
+	"TransactionBrokerage": 3507.19,
+	"LegalConsultantFees": 2537.92,
+	"FinancialConsultantFees": 5393.82,
+	"StampDutyCost": 4076.01,
+	"Others": 2192.78,
+	"Total": 8733.68,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%204')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%204')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%204')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%204')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 5",
+	"Version": "Version 5",
+	"WorkitemID": 9210.64,
+	"TaskType": "TaskType 5",
+	"CreatedByID": "CreatedByID 5",
+	"CreatedByName": "CreatedByName 5",
+	"CreationDate": "/Date(1274170640000)/",
+	"PreviousApproverName": "PreviousApproverName 5",
+	"PreConstStartDate": "/Date(990260240000)/",
+	"PreConstEndDate": "/Date(1532333840000)/",
+	"LandArea": 2390.42,
+	"ProjectGrossValue": 2606.31,
+	"EstdLiabilities": 253.95,
+	"NetConsideration": 8644.83,
+	"OnSigning": 3876.5,
+	"OnPlanSanction": 4644.53,
+	"OtherMilestone1": 5241.71,
+	"OtherMilestone2": 530.23,
+	"TransactionCost": 597.52,
+	"TransactionBrokerage": 735.79,
+	"LegalConsultantFees": 1369.13,
+	"FinancialConsultantFees": 7452.82,
+	"StampDutyCost": 830.66,
+	"Others": 9458.29,
+	"Total": 361.18,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%205')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%205')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%205')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%205')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 6",
+	"Version": "Version 6",
+	"WorkitemID": 7670.07,
+	"TaskType": "TaskType 6",
+	"CreatedByID": "CreatedByID 6",
+	"CreatedByName": "CreatedByName 6",
+	"CreationDate": "/Date(1210148240000)/",
+	"PreviousApproverName": "PreviousApproverName 6",
+	"PreConstStartDate": "/Date(1539937040000)/",
+	"PreConstEndDate": "/Date(1555489040000)/",
+	"LandArea": 1526.14,
+	"ProjectGrossValue": 1407.91,
+	"EstdLiabilities": 9453.76,
+	"NetConsideration": 3215.49,
+	"OnSigning": 488.01,
+	"OnPlanSanction": 437.51,
+	"OtherMilestone1": 2347.95,
+	"OtherMilestone2": 8583.65,
+	"TransactionCost": 5338.33,
+	"TransactionBrokerage": 7559.91,
+	"LegalConsultantFees": 5074.03,
+	"FinancialConsultantFees": 4226.1,
+	"StampDutyCost": 7346.05,
+	"Others": 9914.9,
+	"Total": 8316.62,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%206')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%206')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%206')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%206')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 7",
+	"Version": "Version 7",
+	"WorkitemID": 9923.53,
+	"TaskType": "TaskType 7",
+	"CreatedByID": "CreatedByID 7",
+	"CreatedByName": "CreatedByName 7",
+	"CreationDate": "/Date(1039421840000)/",
+	"PreviousApproverName": "PreviousApproverName 7",
+	"PreConstStartDate": "/Date(1239351440000)/",
+	"PreConstEndDate": "/Date(1268381840000)/",
+	"LandArea": 6666.91,
+	"ProjectGrossValue": 3064.08,
+	"EstdLiabilities": 3857.63,
+	"NetConsideration": 6043.81,
+	"OnSigning": 4782.39,
+	"OnPlanSanction": 5449.66,
+	"OtherMilestone1": 7566.99,
+	"OtherMilestone2": 8708.98,
+	"TransactionCost": 2500.55,
+	"TransactionBrokerage": 7329.31,
+	"LegalConsultantFees": 5370.75,
+	"FinancialConsultantFees": 4086.07,
+	"StampDutyCost": 7640.19,
+	"Others": 3914.64,
+	"Total": 3359.28,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%207')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%207')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%207')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%207')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 8",
+	"Version": "Version 8",
+	"WorkitemID": 4605.26,
+	"TaskType": "TaskType 8",
+	"CreatedByID": "CreatedByID 8",
+	"CreatedByName": "CreatedByName 8",
+	"CreationDate": "/Date(1490602640000)/",
+	"PreviousApproverName": "PreviousApproverName 8",
+	"PreConstStartDate": "/Date(1133425040000)/",
+	"PreConstEndDate": "/Date(1184314640000)/",
+	"LandArea": 3684.2,
+	"ProjectGrossValue": 1902.14,
+	"EstdLiabilities": 161.29,
+	"NetConsideration": 8419.26,
+	"OnSigning": 8175.99,
+	"OnPlanSanction": 1149.33,
+	"OtherMilestone1": 4983.7,
+	"OtherMilestone2": 8022.9,
+	"TransactionCost": 2652.61,
+	"TransactionBrokerage": 3710.25,
+	"LegalConsultantFees": 7931.29,
+	"FinancialConsultantFees": 2456.87,
+	"StampDutyCost": 1323.49,
+	"Others": 3112.94,
+	"Total": 5752,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%208')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%208')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%208')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%208')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 9",
+	"Version": "Version 9",
+	"WorkitemID": 125.75,
+	"TaskType": "TaskType 9",
+	"CreatedByID": "CreatedByID 9",
+	"CreatedByName": "CreatedByName 9",
+	"CreationDate": "/Date(978337040000)/",
+	"PreviousApproverName": "PreviousApproverName 9",
+	"PreConstStartDate": "/Date(1011687440000)/",
+	"PreConstEndDate": "/Date(1538381840000)/",
+	"LandArea": 4371.32,
+	"ProjectGrossValue": 4674.12,
+	"EstdLiabilities": 5518.34,
+	"NetConsideration": 8766.93,
+	"OnSigning": 6115.93,
+	"OnPlanSanction": 7083.6,
+	"OtherMilestone1": 4670.93,
+	"OtherMilestone2": 6907.69,
+	"TransactionCost": 9079.71,
+	"TransactionBrokerage": 3112.69,
+	"LegalConsultantFees": 3031.7,
+	"FinancialConsultantFees": 9250.56,
+	"StampDutyCost": 3227.49,
+	"Others": 1860.56,
+	"Total": 1733.2,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%209')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%209')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%209')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%209')/Revenue"
+		}
+	}
+}, {
+	"DPNumber": "DPNumber 10",
+	"Version": "Version 10",
+	"WorkitemID": 9511.27,
+	"TaskType": "TaskType 10",
+	"CreatedByID": "CreatedByID 10",
+	"CreatedByName": "CreatedByName 10",
+	"CreationDate": "/Date(1070525840000)/",
+	"PreviousApproverName": "PreviousApproverName 10",
+	"PreConstStartDate": "/Date(1136103440000)/",
+	"PreConstEndDate": "/Date(1090743440000)/",
+	"LandArea": 669.75,
+	"ProjectGrossValue": 6845.87,
+	"EstdLiabilities": 9792.29,
+	"NetConsideration": 5096.2,
+	"OnSigning": 9497.1,
+	"OnPlanSanction": 1346.18,
+	"OtherMilestone1": 417.68,
+	"OtherMilestone2": 6235.02,
+	"TransactionCost": 7773.48,
+	"TransactionBrokerage": 9393.12,
+	"LegalConsultantFees": 569.42,
+	"FinancialConsultantFees": 7560.25,
+	"StampDutyCost": 1345.96,
+	"Others": 3878.2,
+	"Total": 9902.5,
+	"__metadata": {
+		"uri": "DPHeaderDataSet('DPNumber%2010')",
+		"type": "3141f45694a559cb140f9531.DPHeaderData"
+	},
+	"Development": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%2010')/Development"
+		}
+	},
+	"Capital": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%2010')/Capital"
+		}
+	},
+	"Revenue": {
+		"__deferred": {
+			"uri": "DPHeaderDataSet('DPNumber%2010')/Revenue"
+		}
+	}
+}]

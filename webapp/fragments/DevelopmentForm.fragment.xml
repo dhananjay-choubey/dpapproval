@@ -1,40 +1,17 @@
-<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
-	<form:Form width="100%" editable="true" visible="true">
-		<form:title/>
-		<form:formContainers>
-			<form:FormContainer visible="true">
-				<form:formElements>
-					<form:FormElement visible="true">
-						<form:label>
-							<Label text="Pre-Construction Start Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"
-								visible="true"/>
-						</form:label>
-						<form:fields>
-							<DatePicker value="20200831" displayFormat="short" required="false" valueStateText="Invalid entry" enabled="false" visible="true"
-								valueFormat="yyyyMMdd"/>
-						</form:fields>
-					</form:FormElement>
-				</form:formElements>
-				<form:title/>
-			</form:FormContainer>
-			<form:FormContainer visible="true">
-				<form:formElements>
-					<form:FormElement visible="true">
-						<form:label>
-							<Label text="Pre-Construction End Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"
-								visible="true"/>
-						</form:label>
-						<form:fields>
-							<DatePicker value="20230628" displayFormat="short" required="false" valueStateText="Invalid entry" enabled="false" visible="true"
-								valueFormat="yyyyMMdd"/>
-						</form:fields>
-					</form:FormElement>
-				</form:formElements>
-				<form:title/>
-			</form:FormContainer>
-		</form:formContainers>
-		<form:layout>
-			<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="1" labelSpanL="6" columnsM="2" labelSpanM="4" labelSpanS="12"/>
-		</form:layout>
-	</form:Form>
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<l:Grid defaultSpan="L12 M12 S12" width="auto">
+		<l:content>
+			<f:SimpleForm minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="6" labelSpanM="6"
+				emptySpanL="1" emptySpanM="1" columnsL="2" columnsM="2">
+				<f:content>
+					<core:Title/>
+					<Label text="Pre-Construction Start Date"/>
+					<Text text="{path: 'PreConstStartDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"/>
+					<core:Title/>
+					<Label text="Pre-Construction End Date"/>
+					<Text text="{path: 'PreConstEndDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"/>
+				</f:content>
+			</f:SimpleForm>
+		</l:content>
+	</l:Grid>
 </core:FragmentDefinition>

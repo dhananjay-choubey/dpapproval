@@ -28,56 +28,12 @@ sap.ui.define([
 
 			this.setModel(oViewModel, "detailView");
 
-			this.getOwnerComponent().oWhenMetadataIsLoaded.then(this._onMetadataLoaded.bind(this));
+			//this.getOwnerComponent().oWhenMetadataIsLoaded.then(this._onMetadataLoaded.bind(this));
 		},
 
 		/* =========================================================== */
 		/* event handlers                                              */
 		/* =========================================================== */
-
-		/**
-		 * Event handler when the share button has been clicked
-		 * @param {sap.ui.base.Event} oEvent the butten press event
-		 * @public
-		 */
-		onSharePress: function () {
-			var oShareSheet = this.byId("shareSheet");
-			oShareSheet.addStyleClass(this.getOwnerComponent().getContentDensityClass());
-			oShareSheet.openBy(this.byId("shareButton"));
-		},
-
-		/**
-		 * Event handler when the share by E-Mail button has been clicked
-		 * @public
-		 */
-		onShareEmailPress: function () {
-			var oViewModel = this.getModel("detailView");
-
-			sap.m.URLHelper.triggerEmail(
-				null,
-				oViewModel.getProperty("/shareSendEmailSubject"),
-				oViewModel.getProperty("/shareSendEmailMessage")
-			);
-		},
-
-		/**
-		 * Event handler when the share in JAM button has been clicked
-		 * @public
-		 */
-		onShareInJamPress: function () {
-			var oViewModel = this.getModel("detailView"),
-				oShareDialog = sap.ui.getCore().createComponent({
-					name: "sap.collaboration.components.fiori.sharing.dialog",
-					settings: {
-						object: {
-							id: location.href,
-							share: oViewModel.getProperty("/shareOnJamTitle")
-						}
-					}
-				});
-
-			oShareDialog.open();
-		},
 
 		/**
 		 * Updates the item count within the line item table's header
@@ -114,8 +70,8 @@ sap.ui.define([
 		_onObjectMatched: function (oEvent) {
 			var sObjectId = oEvent.getParameter("arguments").objectId;
 			this.getOwnerComponent().oWhenMetadataIsLoaded.then(function () {
-				var sObjectPath = this.getModel().createKey("Objects", {
-					ObjectID: sObjectId
+				var sObjectPath = this.getModel().createKey("DPHeaderDataSet", {
+					DPNumber: sObjectId
 				});
 				this._bindView("/" + sObjectPath);
 			}.bind(this));
@@ -162,21 +118,10 @@ sap.ui.define([
 				return;
 			}
 
-			var sPath = oElementBinding.getPath(),
-				oResourceBundle = this.getResourceBundle(),
-				oObject = oView.getModel().getObject(sPath),
-				sObjectId = oObject.ObjectID,
-				sObjectName = oObject.Name,
-				oViewModel = this.getModel("detailView");
+			var sPath = oElementBinding.getPath();
 
 			this.getOwnerComponent().oListSelector.selectAListItem(sPath);
 
-			oViewModel.setProperty("/saveAsTileTitle", oResourceBundle.getText("shareSaveTileAppTitle", [sObjectName]));
-			oViewModel.setProperty("/shareOnJamTitle", sObjectName);
-			oViewModel.setProperty("/shareSendEmailSubject",
-				oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));
-			oViewModel.setProperty("/shareSendEmailMessage",
-				oResourceBundle.getText("shareSendEmailObjectMessage", [sObjectName, sObjectId, location.href]));
 		},
 
 		_onMetadataLoaded: function () {

@@ -232,7 +232,7 @@ sap.ui.define([
 					if (mParams.list.getMode() === "None") {
 						return;
 					}
-					var sObjectId = mParams.firstListitem.getBindingContext().getProperty("ObjectID");
+					var sObjectId = mParams.firstListitem.getBindingContext().getProperty("DPNumber");
 					this.getRouter().navTo("object", {
 						objectId: sObjectId
 					}, true);
@@ -255,7 +255,7 @@ sap.ui.define([
 		_showDetail: function (oItem) {
 			var bReplace = !Device.system.phone;
 			this.getRouter().navTo("object", {
-				objectId: oItem.getBindingContext().getProperty("ObjectID")
+				objectId: oItem.getBindingContext().getProperty("DPNumber")
 			}, bReplace);
 		},
 

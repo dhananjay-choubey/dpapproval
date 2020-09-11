@@ -5,18 +5,17 @@
 		<content>
 			<layout:VerticalLayout width="100%" visible="true">
 				<layout:content>
-					<ObjectHeader intro="" title="{PurchaseOrder}" icon=""
-						number="{path: 'Value', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" numberUnit="{Currency}"
-						numberState="None" titleActive="true" backgroundDesign="Solid" condensed="false" visible="true" titlePress="_onObjectHeaderTitlePress">
+					<ObjectHeader intro="" title="{DPNumber}" icon=""
+						number="{path: 'Total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" numberUnit="INR CR" numberState="None"
+						titleActive="false" backgroundDesign="Solid" condensed="false" visible="true" titlePress="_onObjectHeaderTitlePress">
 						<attributes>
-							<ObjectAttribute title="Creator" text="{CreatedByName}" active="true" visible="true" press="_onObjectAttributePress"/>
-							<ObjectAttribute title="Last Approver" text="{CreatedByID}" active="false" visible="true"/>
+							<ObjectAttribute title="Creator" text="{CreatedByName}" active="false" visible="true" press="_onObjectAttributePress"/>
+							<ObjectAttribute title="Last Approver" text="{PreviousApproverName}" active="false" visible="true"/>
 						</attributes>
 						<statuses>
 							<ObjectStatus title="Created On" text="{path: 'CreationDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"
 								state="None" visible="true"/>
-							<ObjectStatus title="Version" text="{path: 'Version', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"
-								state="None" visible="true"/>
+							<ObjectStatus title="Version" text="{Version}" state="None" visible="true"/>
 						</statuses>
 					</ObjectHeader>
 				</layout:content>
@@ -28,7 +27,6 @@
 						textDirection="Inherit" visible="true">
 						<content>
 							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.GrowthMobile" type="XML"/>
-							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.GrowthDesktop" type="XML"/>
 						</content>
 					</IconTabFilter>
 					<IconTabFilter icon="sap-icon://action-settings" iconColor="Positive" text="Development" count="" design="Vertical" showAll="false"
@@ -58,12 +56,6 @@
 						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
 						<content>
 							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.Comments" type="XML"/>
-						</content>
-					</IconTabFilter>
-					<IconTabFilter icon="sap-icon://attachment" iconColor="Neutral" text="Attachments" count="" design="Vertical" showAll="false"
-						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
-						<content>
-							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.Attachments" type="XML"/>
 						</content>
 					</IconTabFilter>
 				</items>
