@@ -106,7 +106,7 @@ sap.ui.define([
 			var sQuery = oEvent.getParameter("query");
 
 			if (sQuery) {
-				this._oListFilterState.aSearch = [new Filter("Name", FilterOperator.Contains, sQuery)];
+				this._oListFilterState.aSearch = [new Filter("DPNumber", FilterOperator.Contains, sQuery)];
 			} else {
 				this._oListFilterState.aSearch = [];
 			}
@@ -121,41 +121,6 @@ sap.ui.define([
 		 */
 		onRefresh: function () {
 			this._oList.getBinding("items").refresh();
-		},
-
-		/**
-		 * Event handler called when ViewSettingsDialog has been confirmed, i.e.
-		 * has been closed with 'OK'. In the case, the currently chosen filters
-		 * are applied to the master list, which can also mean that the currently
-		 * applied filters are removed from the master list, in case the filter
-		 * settings are removed in the ViewSettingsDialog.
-		 * @param {sap.ui.base.Event} oEvent the confirm event
-		 * @public
-		 */
-		onConfirmViewSettingsDialog: function (oEvent) {
-			var aFilterItems = oEvent.getParameters().filterItems,
-				aFilters = [],
-				aCaptions = [];
-
-			// update filter state:
-			// combine the filter array and the filter string
-			aFilterItems.forEach(function (oItem) {
-				switch (oItem.getKey()) {
-				case "Filter1":
-					aFilters.push(new Filter("UnitNumber", FilterOperator.LE, 100));
-					break;
-				case "Filter2":
-					aFilters.push(new Filter("UnitNumber", FilterOperator.GT, 100));
-					break;
-				default:
-					break;
-				}
-				aCaptions.push(oItem.getText());
-			});
-
-			this._oListFilterState.aFilter = aFilters;
-			this._updateFilterBar(aCaptions.join(", "));
-			this._applyFilterSearch();
 		},
 
 		/**
@@ -280,7 +245,7 @@ sap.ui.define([
 		_applyFilterSearch: function () {
 			var aFilters = this._oListFilterState.aSearch.concat(this._oListFilterState.aFilter),
 				oViewModel = this.getModel("masterView");
-			this._oList.getBinding("items").filter(aFilters, "Application");
+			this._oList.getBinding("items").filter(aFilters);
 			// changes the noDataText of the list in case there are no filter results
 			if (aFilters.length !== 0) {
 				oViewModel.setProperty("/noDataText", this.getResourceBundle().getText("masterListNoDataWithFilterOrSearchText"));
@@ -309,7 +274,7 @@ sap.ui.define([
 			oViewModel.setProperty("/filterBarLabel", this.getResourceBundle().getText("masterFilterBarText", [sFilterBarText]));
 		},
 		onObjectListItemPress: function (oEvent) {
-			if(Device.system.phone){
+			if (Device.system.phone) {
 				this._showDetail(oEvent.getSource());
 			}
 		}
