@@ -57,7 +57,7 @@
 					<Button text="Approve" type="Accept" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
 						press="_onApproveButtonPress"/>
 					<Button text="Reject" type="Reject" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
-						press="_onRejectButtonPress1"/>
+						press="_onRejectButtonPress"/>
 				</content>
 			</OverflowToolbar>
 		</footer>
