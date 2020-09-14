@@ -26,6 +26,20 @@ sap.ui.define([], function () {
 			return {
 				title: sTitle
 			};
+		},
+		getTextAreaVisibility: function (sAction) {
+			if (sAction === "Approve") {
+				return false;
+			} else {
+				return true;
+			}
+		},
+		getSubmitButtonEnable: function (sAction) {
+			if (sAction === "Approve") {
+				return true;
+			} else {
+				return false;
+			}
 		}
 	};
 

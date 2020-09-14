@@ -67,6 +67,9 @@
 				<Property Name="StampDutyCost" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="StampDutyCost"/>
 				<Property Name="Others" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Others"/>
 				<Property Name="Total" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Total"/>
+				<Property Name="Response" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Response"/>
+				<Property Name="Comment" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Comment"/>
+				<Property Name="Action" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Action"/>
 				<NavigationProperty Name="Development" Relationship="3141f45694a559cb140f9531.DPHeaderDataDevelopmentDevelopment"
 					FromRole="FromRole_DPHeaderDataDevelopmentDevelopment" ToRole="ToRole_DPHeaderDataDevelopmentDevelopment"/>
 				<NavigationProperty Name="Capital" Relationship="3141f45694a559cb140f9531.DPHeaderDataCapitalCapital"

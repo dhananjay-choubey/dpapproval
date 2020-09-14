@@ -42,7 +42,10 @@
 		"__deferred": {
 			"uri": "DPHeaderDataSet('DPNumber%201')/Revenue"
 		}
-	}
+	},
+	"Response": "The document has been rejected",
+	"Comment": "not okay",
+	"Action": "Reject"
 }, {
 	"DPNumber": "DPNumber 2",
 	"Version": "Version 2",
@@ -87,7 +90,9 @@
 		"__deferred": {
 			"uri": "DPHeaderDataSet('DPNumber%202')/Revenue"
 		}
-	}
+	},
+	"Response": "The document has been approved",
+	"Action": "Approve"
 }, {
 	"DPNumber": "DPNumber 3",
 	"Version": "Version 3",
