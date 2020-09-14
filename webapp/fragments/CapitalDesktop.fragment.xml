@@ -14,117 +14,117 @@
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>constructionFunding}" wrapping="true"/>
 				<table:template>
-					<Text text="{ConstructionFunding}" width="auto" maxLines="1" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstructionFunding}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>constructionDebtPer}" wrapping="true"/>
 				<table:template>
-					<Text text="{ConstDebtEquityPer}" width="auto" maxLines="1" wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstDebtEquityPer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>constructionDebtInt}" wrapping="true"/>
 				<table:template>
-					<Text text="{ConstDebtIntRatePer}" width="auto" maxLines="1" wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstDebtIntRatePer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>processingFees}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'ProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'ProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
 				<Label text="{i18n>acquisitionFunding}" wrapping="true"/>
 				<table:template>
-					<Text text="{AcquisitionFunding}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AcquisitionFunding}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>acquisitionDebtPer}" wrapping="true"/>
 				<table:template>
-					<Text text="{AcqDebtEquityPer}" width="auto" maxLines="1" wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{AcqDebtEquityPer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>acquisitionDebtInt}" wrapping="true"/>
 				<table:template>
-					<Text text="{AcqDebtIntRatePer}" width="auto" maxLines="1" wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{AcqDebtIntRatePer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>processingFees}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'AcqProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'AcqProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
 				<Label text="{i18n>others}" wrapping="true"/>
 				<table:template>
-					<Text text="{Others}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Others}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>equity}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'Equity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'Equity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>postConstruction}" wrapping="true"/>
 				<table:template>
-					<Text text="{PostConstruction}" width="auto" maxLines="1" wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{PostConstruction}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>LRDPotential}" wrapping="true"/>
 				<table:template>
-					<Text text="{LRDPotential}" width="auto" maxLines="1" wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{LRDPotential}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>LRDInterestRatesPer}" wrapping="true"/>
 				<table:template>
-					<Text text="{LRDIntRatesPer}" width="auto" maxLines="1" wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{LRDIntRatesPer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>LRDProcessingFees}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'LRDProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'LRDProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>DMFees}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'DMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'DMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>applicableGST}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'DMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'DMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>PMFees}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'PMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'PMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>applicableGST}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'PMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'PMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 		</table:columns>

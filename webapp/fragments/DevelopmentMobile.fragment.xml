@@ -4,121 +4,121 @@
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>towers}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>towers}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>FSIArea}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>FSIArea}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>officeArea}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>officeArea}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>efficiencyper}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>efficiencyper}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>amenities}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>amenities}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>efficiencyper}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>efficiencyper}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>totalLeasableArea}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>totalLeasableArea}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>efficiencyper}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>efficiencyper}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>carParksCount}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>carParksCount}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>numberofBasements}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>numberofBasements}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>startDate}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>startDate}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>endDate}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>endDate}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>approvalPermits}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>approvalPermits}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>FSICosts}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>FSICosts}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>constructionCost}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>constructionCost}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>amenitiesFitout}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>amenitiesFitout}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>approvalPermits}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>approvalPermits}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>FSICosts}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>FSICosts}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>constructionCost}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>constructionCost}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>amenitiesFitout}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>amenitiesFitout}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
@@ -127,34 +127,34 @@
 			<ColumnListItem type="Inactive">
 				<cells>
 					<Text text="{Tower}"/>
-					<Text text="{path: 'FSIArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'OfficeArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{EfficiencyPercentage}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{Amenities}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AmenitiesEfficiency}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'FSIArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'OfficeArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{EfficiencyPercentage}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Amenities}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AmenitiesEfficiency}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{path: 'TotalLeaseableArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{LeaseableAreaEfficiency}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{CarParksCount}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{NumberOfBasements}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'StartDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'EndDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{ApprovalPermits}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'FSICosts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'ConstructionCost', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AmenitiesFitOut}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{ApprovalPermits2}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'FSICosts2', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'ConstructionCost1', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AmenitiesFitOut2}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{LeaseableAreaEfficiency}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{CarParksCount}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{NumberOfBasements}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'StartDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'EndDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ApprovalPermits}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'FSICosts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'ConstructionCost', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AmenitiesFitOut}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ApprovalPermits2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'FSICosts2', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'ConstructionCost1', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AmenitiesFitOut2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</cells>
 			</ColumnListItem>
 		</items>

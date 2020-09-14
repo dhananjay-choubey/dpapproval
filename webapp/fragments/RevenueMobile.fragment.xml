@@ -4,98 +4,97 @@
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>towers}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>towers}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>RFPSignedAvgRental}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>RFPSignedAvgRental}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>warmShellRentOffice}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>warmShellRentOffice}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>warmShellRentAmenities}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit"
-						visible="true"/>
+					<Text text="{i18n>warmShellRentAmenities}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>targetAverageRentals}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>targetAverageRentals}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>CAMProfits}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>CAMProfits}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>preleasing}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>preleasing}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>othermilestone}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>othermilestone}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>fullLeasingBy}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>fullLeasingBy}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>preleasing}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>preleasing}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>fullLeasingBy}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>fullLeasingBy}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>securityDeposit}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>securityDeposit}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>rentFreePeriod}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>rentFreePeriod}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>brokerageBudgets}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>brokerageBudgets}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>marketing}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>marketing}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>others}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>others}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
@@ -103,30 +102,30 @@
 		<items>
 			<ColumnListItem type="Inactive">
 				<cells>
-					<Text text="{Tower}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'RFPSignedAvg', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'WarmShellRent', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{WarmShellRentAmenities}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'TargetAvgRentals', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'CAMProfits', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'PreLeasing', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{OtherMilestone}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AllPerLeasingBy}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'PreLeasing2', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AllPerLeasingBy2}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'SecurityDeposit', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{RentFreePeriod}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'BrokerageBudgets', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{Marketing}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{Others}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Tower}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'RFPSignedAvg', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'WarmShellRent', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{WarmShellRentAmenities}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'TargetAvgRentals', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'CAMProfits', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'PreLeasing', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{OtherMilestone}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AllPerLeasingBy}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'PreLeasing2', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AllPerLeasingBy2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'SecurityDeposit', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{RentFreePeriod}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'BrokerageBudgets', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Marketing}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Others}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</cells>
 			</ColumnListItem>
 		</items>

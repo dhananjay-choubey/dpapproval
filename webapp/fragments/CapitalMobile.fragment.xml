@@ -4,115 +4,115 @@
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>towers}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>towers}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>constructionFunding}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>constructionFunding}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>constructionDebtPer}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>constructionDebtPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>constructionDebtInt}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>constructionDebtInt}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>processingFees}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>processingFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>acquisitionFunding}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>acquisitionFunding}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>acquisitionDebtPer}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>acquisitionDebtPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>acquisitionDebtInt}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>acquisitionDebtInt}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>processingFees}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>processingFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>others}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>others}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>equity}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>equity}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>postConstruction}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>postConstruction}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>LRDPotential}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>LRDPotential}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>LRDInterestRatesPer}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>LRDInterestRatesPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>LRDProcessingFees}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>LRDProcessingFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>DMFees}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>DMFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>applicableGST}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>applicableGST}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>PMFees}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>PMFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
-					<Text text="{i18n>applicableGST}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{i18n>applicableGST}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</header>
 				<footer/>
 			</Column>
@@ -120,33 +120,33 @@
 		<items>
 			<ColumnListItem type="Inactive">
 				<cells>
-					<Text text="{Tower}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{ConstructionFunding}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{ConstDebtEquityPer}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{ConstDebtIntRatePer}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'ProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AcquisitionFunding}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AcqDebtEquityPer}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AcqDebtIntRatePer}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'AcqProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{Others}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'Equity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{PostConstruction}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{LRDPotential}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{LRDIntRatesPer}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'LRDProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'DMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'DMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'PMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'PMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1"
-						wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Tower}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstructionFunding}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstDebtEquityPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstDebtIntRatePer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'ProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AcquisitionFunding}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AcqDebtEquityPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AcqDebtIntRatePer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'AcqProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Others}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'Equity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{PostConstruction}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{LRDPotential}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{LRDIntRatesPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'LRDProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'DMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'DMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'PMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'PMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</cells>
 			</ColumnListItem>
 		</items>
