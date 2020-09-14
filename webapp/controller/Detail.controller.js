@@ -3,8 +3,15 @@ sap.ui.define([
 	"com/rmz/dpapproval/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
 	"com/rmz/dpapproval/model/formatter",
-	"sap/ui/Device"
-], function (BaseController, JSONModel, formatter, Device) {
+	"sap/ui/Device",
+	"sap/m/Dialog",
+	"sap/m/Text",
+	"sap/m/TextArea",
+	"sap/m/VBox",
+	"sap/m/Button",
+	"sap/m/ButtonType",
+	"sap/m/MessageToast"
+], function (BaseController, JSONModel, formatter, Device, Dialog, Text, TextArea, VBox, Button, ButtonType, MessageToast) {
 	"use strict";
 
 	return BaseController.extend("com.rmz.dpapproval.controller.Detail", {
@@ -177,10 +184,84 @@ sap.ui.define([
 			oViewModel.setProperty("/delay", iOriginalViewBusyDelay);
 		},
 		_onApproveButtonPress: function (oEvent) {
-
+			this._executeAction("Approve");
 		},
 		_onRejectButtonPress: function (oEvent) {
+			this._executeAction("Reject");
+		},
+		_prepareData: function (sData, sComment, sAction) {
+			return {
+				DPNumber: sData.DPNumber,
+				WorkitemID: sData.WorkitemID,
+				Version: sData.Version,
+				Comment: sComment,
+				Action: sAction
+			};
+		},
+		_executeAction: function (sAction) {
+			var that = this;
+			var sBindingElement = this.getView().getElementBinding();
+			var sModel = sBindingElement.getModel();
+			var sData = sModel.getProperty(sBindingElement.getPath());
+			var sMessage = this.getResourceBundle().getText("approvalRejMsg", [sAction, sData.DPNumber, sData.CreatedByName]);
 
+			var dialog = new Dialog({
+				title: sAction,
+				type: "Message",
+				content: [
+					new VBox({
+						items: [
+							new Text({
+								width: "100%",
+								text: sMessage,
+								wrapping: true
+							}),
+							new TextArea('submitDialogTextarea', {
+								placeholder: that.getResourceBundle().getText("mandtComment"),
+								rows: 4,
+								width: '100%',
+								visible: formatter.getTextAreaVisibility(sAction),
+								liveChange: function (oEvent) {
+									var sText = oEvent.getParameter('value').trim();
+									var parent = oEvent.getSource().getParent().getParent();
+									parent.getBeginButton().setEnabled(sText.length > 0);
+								}
+							})
+						]
+					})
+
+				],
+				beginButton: new Button({
+					type: ButtonType.Emphasized,
+					text: 'Submit',
+					enabled: formatter.getSubmitButtonEnable(sAction),
+					press: function () {
+						var sText = sap.ui.getCore().byId('submitDialogTextarea').getValue();
+						var sFinalData = that._prepareData(sData, sText, sAction);
+						that._callService(sFinalData, sModel, sBindingElement.getPath());
+						dialog.close();
+					}
+				}),
+				endButton: new Button({
+					text: 'Cancel',
+					press: function () {
+						dialog.close();
+					}
+				}),
+				afterClose: function () {
+					dialog.destroy();
+				}
+			});
+			dialog.open();
+		},
+		_callService: function (sData, oModel, sPath) {
+			oModel.update(sPath, sData, {
+				success: function (oData, oResponse) {
+					//MessageToast.show(oData.Response);
+					MessageToast.show("Approved/Rejected");
+					this.getRouter().navTo("master", true);
+				}.bind(this)
+			});
 		}
 
 	});
