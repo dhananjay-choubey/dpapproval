@@ -2,250 +2,300 @@
 	"DPNumber": "DPNumber 1",
 	"Tower": "Tower 1",
 	"ConstructionFunding": "ConstructionFunding 1",
-	"ConstDebtEquityPer": 4381,
-	"ConstDebtIntRatePer": 4359,
-	"ProcessingFees": 8942.32,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 1",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 1",
+	"ProcessingFees": 4638.76,
 	"AcquisitionFunding": "AcquisitionFunding 1",
-	"AcqDebtEquityPer": 7134,
-	"AcqDebtIntRatePer": 7977,
-	"AcqProcessingFees": 2417.03,
-	"Others": "Others 1",
-	"Equity": 3696.77,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 1",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 1",
+	"AcqProcessingFees": 905.98,
+	"Others": 660.24,
+	"Equity": 7377.61,
 	"PostConstruction": "PostConstruction 1",
 	"LRDPotential": "LRDPotential 1",
-	"LRDIntRatesPer": 9796,
-	"LRDProcessingFees": 7323.04,
-	"DMFees": 7994.85,
-	"DMApplicableGST": 7474.5,
-	"PMFees": 6780.75,
-	"PMApplicableGST": 8054.06,
+	"LRDIntRatesPer": "LRDIntRatesPer 1",
+	"LRDProcessingFees": 7154.82,
+	"DMFees": 518.21,
+	"DMApplicableGST": 595.05,
+	"PMFees": 3697.65,
+	"PMApplicableGST": 8864.88,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%201',Tower='Tower%201')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%201',Tower='Tower%201')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 2",
 	"Tower": "Tower 2",
 	"ConstructionFunding": "ConstructionFunding 2",
-	"ConstDebtEquityPer": 176,
-	"ConstDebtIntRatePer": 6300,
-	"ProcessingFees": 7233.42,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 2",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 2",
+	"ProcessingFees": 302.76,
 	"AcquisitionFunding": "AcquisitionFunding 2",
-	"AcqDebtEquityPer": 6293,
-	"AcqDebtIntRatePer": 7491,
-	"AcqProcessingFees": 4030.6,
-	"Others": "Others 2",
-	"Equity": 4782.59,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 2",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 2",
+	"AcqProcessingFees": 3496.36,
+	"Others": 5927.89,
+	"Equity": 1267.84,
 	"PostConstruction": "PostConstruction 2",
 	"LRDPotential": "LRDPotential 2",
-	"LRDIntRatesPer": 9265,
-	"LRDProcessingFees": 1637.46,
-	"DMFees": 9076.75,
-	"DMApplicableGST": 9201.82,
-	"PMFees": 6248.53,
-	"PMApplicableGST": 7521.48,
+	"LRDIntRatesPer": "LRDIntRatesPer 2",
+	"LRDProcessingFees": 6578.53,
+	"DMFees": 5437.42,
+	"DMApplicableGST": 3558.47,
+	"PMFees": 9557.24,
+	"PMApplicableGST": 761.92,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%202',Tower='Tower%202')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%202',Tower='Tower%202')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 3",
 	"Tower": "Tower 3",
 	"ConstructionFunding": "ConstructionFunding 3",
-	"ConstDebtEquityPer": 7779,
-	"ConstDebtIntRatePer": 8090,
-	"ProcessingFees": 3336.32,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 3",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 3",
+	"ProcessingFees": 6372.23,
 	"AcquisitionFunding": "AcquisitionFunding 3",
-	"AcqDebtEquityPer": 8379,
-	"AcqDebtIntRatePer": 9735,
-	"AcqProcessingFees": 8307.93,
-	"Others": "Others 3",
-	"Equity": 3540.32,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 3",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 3",
+	"AcqProcessingFees": 413.93,
+	"Others": 8451.02,
+	"Equity": 3644.86,
 	"PostConstruction": "PostConstruction 3",
 	"LRDPotential": "LRDPotential 3",
-	"LRDIntRatesPer": 7418,
-	"LRDProcessingFees": 7703.9,
-	"DMFees": 364.45,
-	"DMApplicableGST": 7131.21,
-	"PMFees": 5891.44,
-	"PMApplicableGST": 8857.54,
+	"LRDIntRatesPer": "LRDIntRatesPer 3",
+	"LRDProcessingFees": 8902.81,
+	"DMFees": 644.75,
+	"DMApplicableGST": 8208.15,
+	"PMFees": 5076.64,
+	"PMApplicableGST": 836.42,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%203',Tower='Tower%203')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%203',Tower='Tower%203')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 4",
 	"Tower": "Tower 4",
 	"ConstructionFunding": "ConstructionFunding 4",
-	"ConstDebtEquityPer": 6883,
-	"ConstDebtIntRatePer": 1607,
-	"ProcessingFees": 2207.9,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 4",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 4",
+	"ProcessingFees": 2626.79,
 	"AcquisitionFunding": "AcquisitionFunding 4",
-	"AcqDebtEquityPer": 6261,
-	"AcqDebtIntRatePer": 9600,
-	"AcqProcessingFees": 1727.39,
-	"Others": "Others 4",
-	"Equity": 3884.56,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 4",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 4",
+	"AcqProcessingFees": 8474.89,
+	"Others": 9916.83,
+	"Equity": 2631.16,
 	"PostConstruction": "PostConstruction 4",
 	"LRDPotential": "LRDPotential 4",
-	"LRDIntRatesPer": 4098,
-	"LRDProcessingFees": 1260.49,
-	"DMFees": 2292.15,
-	"DMApplicableGST": 1332.18,
-	"PMFees": 6848.6,
-	"PMApplicableGST": 483.32,
+	"LRDIntRatesPer": "LRDIntRatesPer 4",
+	"LRDProcessingFees": 4521.99,
+	"DMFees": 6319.88,
+	"DMApplicableGST": 2065.06,
+	"PMFees": 8085.8,
+	"PMApplicableGST": 4089.16,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%204',Tower='Tower%204')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%204',Tower='Tower%204')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 5",
 	"Tower": "Tower 5",
 	"ConstructionFunding": "ConstructionFunding 5",
-	"ConstDebtEquityPer": 9261,
-	"ConstDebtIntRatePer": 2762,
-	"ProcessingFees": 4051.13,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 5",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 5",
+	"ProcessingFees": 2140.98,
 	"AcquisitionFunding": "AcquisitionFunding 5",
-	"AcqDebtEquityPer": 1189,
-	"AcqDebtIntRatePer": 5131,
-	"AcqProcessingFees": 3772.08,
-	"Others": "Others 5",
-	"Equity": 1701.48,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 5",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 5",
+	"AcqProcessingFees": 4723.42,
+	"Others": 2624,
+	"Equity": 9656.67,
 	"PostConstruction": "PostConstruction 5",
 	"LRDPotential": "LRDPotential 5",
-	"LRDIntRatesPer": 6924,
-	"LRDProcessingFees": 7752.49,
-	"DMFees": 959.4,
-	"DMApplicableGST": 639.65,
-	"PMFees": 1248.58,
-	"PMApplicableGST": 9745.96,
+	"LRDIntRatesPer": "LRDIntRatesPer 5",
+	"LRDProcessingFees": 7875.69,
+	"DMFees": 6016.06,
+	"DMApplicableGST": 4567.26,
+	"PMFees": 8994.43,
+	"PMApplicableGST": 8446.08,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%205',Tower='Tower%205')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%205',Tower='Tower%205')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 6",
 	"Tower": "Tower 6",
 	"ConstructionFunding": "ConstructionFunding 6",
-	"ConstDebtEquityPer": 8661,
-	"ConstDebtIntRatePer": 5754,
-	"ProcessingFees": 8929.05,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 6",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 6",
+	"ProcessingFees": 1926.37,
 	"AcquisitionFunding": "AcquisitionFunding 6",
-	"AcqDebtEquityPer": 2471,
-	"AcqDebtIntRatePer": 2935,
-	"AcqProcessingFees": 5772.62,
-	"Others": "Others 6",
-	"Equity": 3245.01,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 6",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 6",
+	"AcqProcessingFees": 4438.12,
+	"Others": 272.36,
+	"Equity": 6281.02,
 	"PostConstruction": "PostConstruction 6",
 	"LRDPotential": "LRDPotential 6",
-	"LRDIntRatesPer": 8586,
-	"LRDProcessingFees": 7571.69,
-	"DMFees": 6631.42,
-	"DMApplicableGST": 3951.89,
-	"PMFees": 844.18,
-	"PMApplicableGST": 3203.52,
+	"LRDIntRatesPer": "LRDIntRatesPer 6",
+	"LRDProcessingFees": 9750.68,
+	"DMFees": 5669.58,
+	"DMApplicableGST": 1098.66,
+	"PMFees": 7251.49,
+	"PMApplicableGST": 7781.25,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%206',Tower='Tower%206')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%206',Tower='Tower%206')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 7",
 	"Tower": "Tower 7",
 	"ConstructionFunding": "ConstructionFunding 7",
-	"ConstDebtEquityPer": 3957,
-	"ConstDebtIntRatePer": 9685,
-	"ProcessingFees": 504.31,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 7",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 7",
+	"ProcessingFees": 5638.74,
 	"AcquisitionFunding": "AcquisitionFunding 7",
-	"AcqDebtEquityPer": 2248,
-	"AcqDebtIntRatePer": 8827,
-	"AcqProcessingFees": 2976.36,
-	"Others": "Others 7",
-	"Equity": 6630.46,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 7",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 7",
+	"AcqProcessingFees": 1126.68,
+	"Others": 9256.09,
+	"Equity": 6862.09,
 	"PostConstruction": "PostConstruction 7",
 	"LRDPotential": "LRDPotential 7",
-	"LRDIntRatesPer": 2803,
-	"LRDProcessingFees": 3812.46,
-	"DMFees": 8469.56,
-	"DMApplicableGST": 1091.11,
-	"PMFees": 3419.63,
-	"PMApplicableGST": 5644.97,
+	"LRDIntRatesPer": "LRDIntRatesPer 7",
+	"LRDProcessingFees": 8372.46,
+	"DMFees": 5275.14,
+	"DMApplicableGST": 4408.18,
+	"PMFees": 9851.2,
+	"PMApplicableGST": 7044.3,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%207',Tower='Tower%207')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%207',Tower='Tower%207')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 8",
 	"Tower": "Tower 8",
 	"ConstructionFunding": "ConstructionFunding 8",
-	"ConstDebtEquityPer": 6211,
-	"ConstDebtIntRatePer": 2804,
-	"ProcessingFees": 7342.17,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 8",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 8",
+	"ProcessingFees": 9088.46,
 	"AcquisitionFunding": "AcquisitionFunding 8",
-	"AcqDebtEquityPer": 7065,
-	"AcqDebtIntRatePer": 3438,
-	"AcqProcessingFees": 7366.11,
-	"Others": "Others 8",
-	"Equity": 7435.23,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 8",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 8",
+	"AcqProcessingFees": 2360.12,
+	"Others": 9675.3,
+	"Equity": 7916.43,
 	"PostConstruction": "PostConstruction 8",
 	"LRDPotential": "LRDPotential 8",
-	"LRDIntRatesPer": 454,
-	"LRDProcessingFees": 2688.31,
-	"DMFees": 3130.48,
-	"DMApplicableGST": 921.8,
-	"PMFees": 1452.27,
-	"PMApplicableGST": 2851.63,
+	"LRDIntRatesPer": "LRDIntRatesPer 8",
+	"LRDProcessingFees": 967.65,
+	"DMFees": 2841.22,
+	"DMApplicableGST": 982.89,
+	"PMFees": 9138.31,
+	"PMApplicableGST": 3909.7,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%208',Tower='Tower%208')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%208',Tower='Tower%208')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 9",
 	"Tower": "Tower 9",
 	"ConstructionFunding": "ConstructionFunding 9",
-	"ConstDebtEquityPer": 421,
-	"ConstDebtIntRatePer": 9757,
-	"ProcessingFees": 169.46,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 9",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 9",
+	"ProcessingFees": 7219.28,
 	"AcquisitionFunding": "AcquisitionFunding 9",
-	"AcqDebtEquityPer": 390,
-	"AcqDebtIntRatePer": 4178,
-	"AcqProcessingFees": 4509.56,
-	"Others": "Others 9",
-	"Equity": 8989.24,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 9",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 9",
+	"AcqProcessingFees": 43.06,
+	"Others": 9270.53,
+	"Equity": 5157.42,
 	"PostConstruction": "PostConstruction 9",
 	"LRDPotential": "LRDPotential 9",
-	"LRDIntRatesPer": 6680,
-	"LRDProcessingFees": 9541.78,
-	"DMFees": 5682.96,
-	"DMApplicableGST": 4935.39,
-	"PMFees": 8874.97,
-	"PMApplicableGST": 3260.49,
+	"LRDIntRatesPer": "LRDIntRatesPer 9",
+	"LRDProcessingFees": 1135.9,
+	"DMFees": 8861.5,
+	"DMApplicableGST": 5185.73,
+	"PMFees": 6917.71,
+	"PMApplicableGST": 5069.7,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%209',Tower='Tower%209')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%209',Tower='Tower%209')/DPHeaderData"
+		}
 	}
 }, {
 	"DPNumber": "DPNumber 10",
 	"Tower": "Tower 10",
 	"ConstructionFunding": "ConstructionFunding 10",
-	"ConstDebtEquityPer": 912,
-	"ConstDebtIntRatePer": 6290,
-	"ProcessingFees": 9573.55,
+	"ConstDebtEquityPer": "ConstDebtEquityPer 10",
+	"ConstDebtIntRatePer": "ConstDebtIntRatePer 10",
+	"ProcessingFees": 3170.35,
 	"AcquisitionFunding": "AcquisitionFunding 10",
-	"AcqDebtEquityPer": 4409,
-	"AcqDebtIntRatePer": 1040,
-	"AcqProcessingFees": 4033.64,
-	"Others": "Others 10",
-	"Equity": 1673.9,
+	"AcqDebtEquityPer": "AcqDebtEquityPer 10",
+	"AcqDebtIntRatePer": "AcqDebtIntRatePer 10",
+	"AcqProcessingFees": 8862.83,
+	"Others": 3386.79,
+	"Equity": 6949.41,
 	"PostConstruction": "PostConstruction 10",
 	"LRDPotential": "LRDPotential 10",
-	"LRDIntRatesPer": 916,
-	"LRDProcessingFees": 7776.88,
-	"DMFees": 2932.32,
-	"DMApplicableGST": 8089.07,
-	"PMFees": 9669.6,
-	"PMApplicableGST": 7303.53,
+	"LRDIntRatesPer": "LRDIntRatesPer 10",
+	"LRDProcessingFees": 5595.25,
+	"DMFees": 867.54,
+	"DMApplicableGST": 8296.43,
+	"PMFees": 2423.03,
+	"PMApplicableGST": 7770.69,
 	"__metadata": {
 		"uri": "CapitalSet(DPNumber='DPNumber%2010',Tower='Tower%2010')",
-		"type": "3141f45694a559cb140f9531.Capital"
+		"type": "ZPROJ_DP_APPROVAL_SRV.Capital"
+	},
+	"DPHeaderData": {
+		"__deferred": {
+			"uri": "CapitalSet(DPNumber='DPNumber%2010',Tower='Tower%2010')/DPHeaderData"
+		}
 	}
 }]

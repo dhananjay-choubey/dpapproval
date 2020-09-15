@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
-		items="{path:'Development', templateShareable:true}" visible="true">
+		items="{path:'DevelopmentSet', templateShareable:true}" visible="true">
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
@@ -127,15 +127,12 @@
 			<ColumnListItem type="Inactive">
 				<cells>
 					<Text text="{Tower}"/>
-					<Text text="{path: 'FSIArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'OfficeArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{FSIArea}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{OfficeArea}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{EfficiencyPercentage}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{Amenities}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{AmenitiesEfficiency}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'TotalLeaseableArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{TotalLeaseableArea}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{LeaseableAreaEfficiency}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{CarParksCount}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{NumberOfBasements}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -144,16 +141,12 @@
 					<Text text="{path: 'EndDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" wrapping="true"
 						textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{ApprovalPermits}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'FSICosts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'ConstructionCost', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{FSICosts}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstructionCost}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{AmenitiesFitOut}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{ApprovalPermits2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'FSICosts2', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'ConstructionCost1', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{FSICosts2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstructionCost1}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{AmenitiesFitOut2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</cells>
 			</ColumnListItem>

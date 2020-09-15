@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:table="sap.ui.table">
 	<table:Table selectionMode="None" showNoData="true" fixedColumnCount="1" enableColumnFreeze="false" enableSelectAll="false"
 		showColumnVisibilityMenu="false" enableCellFilter="false" enableColumnReordering="false" visibleRowCountMode="Fixed"
-		rows="{path:'Development', templateShareable:true}" enableBusyIndicator="true" fixedRowCount="0" alternateRowColors="true"
+		rows="{path:'DevelopmentSet', templateShareable:true}" enableBusyIndicator="true" fixedRowCount="0" alternateRowColors="true"
 		fixedBottomRowCount="0" visibleRowCount="5" visible="true">
 		<!--  sap.ui.core.Control  -->
 		<table:columns>
@@ -14,15 +14,13 @@
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>FSIArea}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'FSIArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{FSIArea}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>officeArea}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'OfficeArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{OfficeArea}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
@@ -31,10 +29,10 @@
 					<Text text="{EfficiencyPercentage}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
-			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
+			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>amenities}" wrapping="true"/>
 				<table:template>
-					<Text text="{Amenities}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Amenities}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
@@ -46,8 +44,7 @@
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>totalLeasableArea}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'TotalLeaseableArea', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{TotalLeaseableArea}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
@@ -82,56 +79,52 @@
 						textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
-			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
+			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>approvalPermits}" wrapping="true"/>
 				<table:template>
-					<Text text="{ApprovalPermits}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ApprovalPermits}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>FSICosts}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'FSICosts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{FSICosts}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>constructionCost}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'ConstructionCost', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstructionCost}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
-			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
+			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>amenitiesFitout}" wrapping="true"/>
 				<table:template>
-					<Text text="{AmenitiesFitOut}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AmenitiesFitOut}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
-			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
+			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>approvalPermits}" wrapping="true"/>
 				<table:template>
-					<Text text="{ApprovalPermits2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ApprovalPermits2}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>FSICosts}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'FSICosts2', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{FSICosts2}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>constructionCost}" wrapping="true"/>
 				<table:template>
-					<Text text="{path: 'ConstructionCost1', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
+					<Text text="{ConstructionCost1}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
-			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
+			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
 				<Label text="{i18n>amenitiesFitout}" wrapping="true"/>
 				<table:template>
-					<Text text="{AmenitiesFitOut2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AmenitiesFitOut2}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 		</table:columns>

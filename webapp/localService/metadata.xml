@@ -1,221 +1,275 @@
-<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
-	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
 	<edmx:DataServices m:DataServiceVersion="2.0">
-		<Schema Namespace="3141f45694a559cb140f9531" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-			<EntityContainer Name="3141f45694a559cb140f9531_Entities" m:IsDefaultEntityContainer="true">
-				<EntitySet Name="DPHeaderDataSet" EntityType="3141f45694a559cb140f9531.DPHeaderData" sap:creatable="true" sap:updatable="true"
-					sap:deletable="true"/>
-				<AssociationSet Name="DPHeaderDataDevelopmentDevelopment" Association="3141f45694a559cb140f9531.DPHeaderDataDevelopmentDevelopment"
-					sap:creatable="true" sap:updatable="true" sap:deletable="true">
-					<End EntitySet="DPHeaderDataSet" Role="FromRole_DPHeaderDataDevelopmentDevelopment"/>
-					<End EntitySet="DevelopmentSet" Role="ToRole_DPHeaderDataDevelopmentDevelopment"/>
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZPROJ_DP_APPROVAL_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="DPHeaderData" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="DPNumber"/>
+				</Key>
+				<Property Name="DPNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DP number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="DP Version" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="WorkitemID" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="ID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TaskType" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:label="Transaction Type"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="CreatedByID" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Created by"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="CreationDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Created On"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PreviousApproverID" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PreConstStartDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Pre-Cons. Start date"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PreConstEndDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Pre-Const. End date"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="LandArea" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Land Area (Acres)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ProjectGrossValue" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Project Gross Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="EstdLiabilities" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Less: Est. liab." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="NetConsideration" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Net Consideration" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OnSigning" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false" sap:label="On Signing"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OnPlanSanction" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="On Plan Sanction" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OtherMilestone1" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Other Milestone 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OtherMilestone2" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Other Milestone 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TransactionCost" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Transaction Cost" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TransactionBrokerage" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Tran. Brokerage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="LegalConsultantFees" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Legal Consultant Fee" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FinancialConsultantFees" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="DD consult Fee" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="StampDutyCost" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false" sap:label="Stamp Duty Costs"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Others" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false" sap:label="Others (INR Cr)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Total" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false" sap:label="Total (INR Cr)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="DevelopmentSet" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Development" FromRole="FromRole_Growth_Development"
+					ToRole="ToRole_Growth_Development"/>
+				<NavigationProperty Name="CapitalSet" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Capital" FromRole="FromRole_Growth_Capital"
+					ToRole="ToRole_Growth_Capital"/>
+				<NavigationProperty Name="RevenueSet" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Revenue" FromRole="FromRole_Growth_Revenue"
+					ToRole="ToRole_Growth_Revenue"/>
+			</EntityType>
+			<EntityType Name="Development" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="DPNumber"/>
+					<PropertyRef Name="Tower"/>
+				</Key>
+				<Property Name="DPNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DP number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tower" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Tower" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FSIArea" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="FSI Area"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OfficeArea" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Office Area"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="EfficiencyPercentage" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Efficiency %"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Amenities" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Amenities"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AmenitiesEfficiency" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Efficiency %"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TotalLeaseableArea" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Total Leasable Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="LeaseableAreaEfficiency" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Efficiency %"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="CarParksCount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Car Parks Count"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="NumberOfBasements" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Number of Basements" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="StartDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Start Date"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="EndDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="End Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ApprovalPermits" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Approval / Permits" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FSICosts" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false" sap:label="FSI Costs"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ConstructionCost" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Construction Cost" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AmenitiesFitOut" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Amenities Fit-out" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ApprovalPermits2" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Approval / Permits" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FSICosts2" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false" sap:label="FSI Costs"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ConstructionCost1" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false"
+					sap:label="Construction Cost" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AmenitiesFitOut2" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Amenities Fit-out" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="DPHeaderData" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Development" FromRole="ToRole_Growth_Development"
+					ToRole="FromRole_Growth_Development"/>
+			</EntityType>
+			<EntityType Name="Capital" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="DPNumber"/>
+					<PropertyRef Name="Tower"/>
+				</Key>
+				<Property Name="DPNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DP number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tower" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Tower" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ConstructionFunding" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Construction Funding"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ConstDebtEquityPer" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"
+					sap:label="Construction Debt to Equity %" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ConstDebtIntRatePer" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"
+					sap:label="Construction Debt Interest Rate %" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ProcessingFees" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Processing Fees (INR Cr)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AcquisitionFunding" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Acquisition Funding"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AcqDebtEquityPer" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"
+					sap:label="Acquisition Debt to Equity %" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AcqDebtIntRatePer" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false"
+					sap:label="Acquisition Debt Interest Rate %" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AcqProcessingFees" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Processing Fees (INR Cr)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Others" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Others"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Equity" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Equity (INR Cr)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PostConstruction" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Post Construction"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="LRDPotential" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="LRD Potential (NOI Multiple)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="LRDIntRatesPer" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="LRD Interest Rates %"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="LRDProcessingFees" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="LRD Processing Fees (INR Cr)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DMFees" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="DM Fees"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DMApplicableGST" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Applicable GST"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PMFees" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="PM Fees"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PMApplicableGST" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Applicable GST"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="DPHeaderData" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Capital" FromRole="ToRole_Growth_Capital"
+					ToRole="FromRole_Growth_Capital"/>
+			</EntityType>
+			<EntityType Name="Revenue" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="DPNumber"/>
+					<PropertyRef Name="Tower"/>
+				</Key>
+				<Property Name="DPNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DP number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tower" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Tower" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="RFPSignedAvg" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="RFP Signed Avg Rental (Including Parking)" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="WarmShellRent" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Warm Shell Rent- Office (Including Parking)" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="WarmShellRentAmenities" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Warm Shell Rent- Amenities" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TargetAvgRentals" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label=" Target Average Rentals (including Parking)" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="CAMProfits" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="CAM Profits - Cost + 20% On total SBA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PreLeasing" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Pre-leasing"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OtherMilestone" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Other milestone"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AllPerLeasingBy" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="100% Leasing by"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PreLeasing2" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Pre-leasing"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AllPerLeasingBy2" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="100% Leasing by"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SecurityDeposit" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Security Deposit (no. of months of Rent)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="RentFreePeriod" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Rent Free Period (no. of months of Rent)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BrokerageBudgets" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false"
+					sap:label="Brokerage Budgets (no. of months of Rent)" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Marketing" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Marketing"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Others" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Others"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="DPHeaderData" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Revenue" FromRole="ToRole_Growth_Revenue"
+					ToRole="FromRole_Growth_Revenue"/>
+			</EntityType>
+			<Association Name="Growth_Capital" sap:content-version="1">
+				<End Type="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" Multiplicity="1" Role="FromRole_Growth_Capital"/>
+				<End Type="ZPROJ_DP_APPROVAL_SRV.Capital" Multiplicity="*" Role="ToRole_Growth_Capital"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Growth_Capital">
+						<PropertyRef Name="DPNumber"/>
+					</Principal>
+					<Dependent Role="ToRole_Growth_Capital">
+						<PropertyRef Name="DPNumber"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Growth_Revenue" sap:content-version="1">
+				<End Type="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" Multiplicity="1" Role="FromRole_Growth_Revenue"/>
+				<End Type="ZPROJ_DP_APPROVAL_SRV.Revenue" Multiplicity="*" Role="ToRole_Growth_Revenue"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Growth_Revenue">
+						<PropertyRef Name="DPNumber"/>
+					</Principal>
+					<Dependent Role="ToRole_Growth_Revenue">
+						<PropertyRef Name="DPNumber"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Growth_Development" sap:content-version="1">
+				<End Type="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" Multiplicity="1" Role="FromRole_Growth_Development"/>
+				<End Type="ZPROJ_DP_APPROVAL_SRV.Development" Multiplicity="*" Role="ToRole_Growth_Development"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Growth_Development">
+						<PropertyRef Name="DPNumber"/>
+					</Principal>
+					<Dependent Role="ToRole_Growth_Development">
+						<PropertyRef Name="DPNumber"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZPROJ_DP_APPROVAL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="DPHeaderDataSet" EntityType="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="DevelopmentSet" EntityType="ZPROJ_DP_APPROVAL_SRV.Development" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="CapitalSet" EntityType="ZPROJ_DP_APPROVAL_SRV.Capital" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="RevenueSet" EntityType="ZPROJ_DP_APPROVAL_SRV.Revenue" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<AssociationSet Name="Growth_RevenueSet" Association="ZPROJ_DP_APPROVAL_SRV.Growth_Revenue" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="DPHeaderDataSet" Role="FromRole_Growth_Revenue"/>
+					<End EntitySet="RevenueSet" Role="ToRole_Growth_Revenue"/>
 				</AssociationSet>
-				<AssociationSet Name="DPHeaderDataCapitalCapital" Association="3141f45694a559cb140f9531.DPHeaderDataCapitalCapital" sap:creatable="true"
-					sap:updatable="true" sap:deletable="true">
-					<End EntitySet="DPHeaderDataSet" Role="FromRole_DPHeaderDataCapitalCapital"/>
-					<End EntitySet="CapitalSet" Role="ToRole_DPHeaderDataCapitalCapital"/>
+				<AssociationSet Name="Growth_CapitalSet" Association="ZPROJ_DP_APPROVAL_SRV.Growth_Capital" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="DPHeaderDataSet" Role="FromRole_Growth_Capital"/>
+					<End EntitySet="CapitalSet" Role="ToRole_Growth_Capital"/>
 				</AssociationSet>
-				<AssociationSet Name="DPHeaderDataRevenueRevenue" Association="3141f45694a559cb140f9531.DPHeaderDataRevenueRevenue" sap:creatable="true"
-					sap:updatable="true" sap:deletable="true">
-					<End EntitySet="DPHeaderDataSet" Role="FromRole_DPHeaderDataRevenueRevenue"/>
-					<End EntitySet="RevenueSet" Role="ToRole_DPHeaderDataRevenueRevenue"/>
+				<AssociationSet Name="Growth_DevelopmentSet" Association="ZPROJ_DP_APPROVAL_SRV.Growth_Development" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="DPHeaderDataSet" Role="FromRole_Growth_Development"/>
+					<End EntitySet="DevelopmentSet" Role="ToRole_Growth_Development"/>
 				</AssociationSet>
-				<EntitySet Name="DevelopmentSet" EntityType="3141f45694a559cb140f9531.Development" sap:creatable="true" sap:updatable="true"
-					sap:deletable="true"/>
-				<EntitySet Name="CapitalSet" EntityType="3141f45694a559cb140f9531.Capital" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
-				<EntitySet Name="RevenueSet" EntityType="3141f45694a559cb140f9531.Revenue" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
 			</EntityContainer>
-			<EntityType Name="DPHeaderData">
-				<Key>
-					<PropertyRef Name="DPNumber"/>
-				</Key>
-				<Property Name="DPNumber" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DP Number"/>
-				<Property Name="Version" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DP Version"/>
-				<Property Name="WorkitemID" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WorkitemID"/>
-				<Property Name="TaskType" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="TaskType"/>
-				<Property Name="CreatedByID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CreatedByID"/>
-				<Property Name="CreatedByName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CreatedByName"/>
-				<Property Name="CreationDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date"
-					sap:label="CreationDate"/>
-				<Property Name="PreviousApproverName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="PreviousApproverName"/>
-				<Property Name="PreConstStartDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:display-format="Date" sap:label="PreConstStartDate"/>
-				<Property Name="PreConstEndDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:display-format="Date" sap:label="PreConstEndDate"/>
-				<Property Name="LandArea" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="LandArea"/>
-				<Property Name="ProjectGrossValue" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="ProjectGrossValue"/>
-				<Property Name="EstdLiabilities" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="EstdLiabilities"/>
-				<Property Name="NetConsideration" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="NetConsideration"/>
-				<Property Name="OnSigning" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="OnSigning"/>
-				<Property Name="OnPlanSanction" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="OnPlanSanction"/>
-				<Property Name="OtherMilestone1" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="OtherMilestone1"/>
-				<Property Name="OtherMilestone2" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="OtherMilestone2"/>
-				<Property Name="TransactionCost" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="TransactionCost"/>
-				<Property Name="TransactionBrokerage" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="TransactionBrokerage"/>
-				<Property Name="LegalConsultantFees" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="LegalConsultantFees"/>
-				<Property Name="FinancialConsultantFees" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="FinancialConsultantFees"/>
-				<Property Name="StampDutyCost" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="StampDutyCost"/>
-				<Property Name="Others" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Others"/>
-				<Property Name="Total" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Total"/>
-				<Property Name="Response" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Response"/>
-				<Property Name="Comment" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Comment"/>
-				<Property Name="Action" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Action"/>
-				<NavigationProperty Name="Development" Relationship="3141f45694a559cb140f9531.DPHeaderDataDevelopmentDevelopment"
-					FromRole="FromRole_DPHeaderDataDevelopmentDevelopment" ToRole="ToRole_DPHeaderDataDevelopmentDevelopment"/>
-				<NavigationProperty Name="Capital" Relationship="3141f45694a559cb140f9531.DPHeaderDataCapitalCapital"
-					FromRole="FromRole_DPHeaderDataCapitalCapital" ToRole="ToRole_DPHeaderDataCapitalCapital"/>
-				<NavigationProperty Name="Revenue" Relationship="3141f45694a559cb140f9531.DPHeaderDataRevenueRevenue"
-					FromRole="FromRole_DPHeaderDataRevenueRevenue" ToRole="ToRole_DPHeaderDataRevenueRevenue"/>
-			</EntityType>
-			<Association Name="DPHeaderDataDevelopmentDevelopment">
-				<End Type="3141f45694a559cb140f9531.DPHeaderData" Multiplicity="1" Role="FromRole_DPHeaderDataDevelopmentDevelopment"/>
-				<End Type="3141f45694a559cb140f9531.Development" Multiplicity="*" Role="ToRole_DPHeaderDataDevelopmentDevelopment"/>
-				<ReferentialConstraint>
-					<Principal Role="FromRole_DPHeaderDataDevelopmentDevelopment">
-						<PropertyRef Name="DPNumber"/>
-					</Principal>
-					<Dependent Role="ToRole_DPHeaderDataDevelopmentDevelopment">
-						<PropertyRef Name="DPNumber"/>
-					</Dependent>
-				</ReferentialConstraint>
-			</Association>
-			<Association Name="DPHeaderDataCapitalCapital">
-				<End Type="3141f45694a559cb140f9531.DPHeaderData" Multiplicity="1" Role="FromRole_DPHeaderDataCapitalCapital"/>
-				<End Type="3141f45694a559cb140f9531.Capital" Multiplicity="*" Role="ToRole_DPHeaderDataCapitalCapital"/>
-				<ReferentialConstraint>
-					<Principal Role="FromRole_DPHeaderDataCapitalCapital">
-						<PropertyRef Name="DPNumber"/>
-					</Principal>
-					<Dependent Role="ToRole_DPHeaderDataCapitalCapital">
-						<PropertyRef Name="DPNumber"/>
-					</Dependent>
-				</ReferentialConstraint>
-			</Association>
-			<Association Name="DPHeaderDataRevenueRevenue">
-				<End Type="3141f45694a559cb140f9531.DPHeaderData" Multiplicity="1" Role="FromRole_DPHeaderDataRevenueRevenue"/>
-				<End Type="3141f45694a559cb140f9531.Revenue" Multiplicity="*" Role="ToRole_DPHeaderDataRevenueRevenue"/>
-				<ReferentialConstraint>
-					<Principal Role="FromRole_DPHeaderDataRevenueRevenue">
-						<PropertyRef Name="DPNumber"/>
-					</Principal>
-					<Dependent Role="ToRole_DPHeaderDataRevenueRevenue">
-						<PropertyRef Name="DPNumber"/>
-					</Dependent>
-				</ReferentialConstraint>
-			</Association>
-			<EntityType Name="Development">
-				<Key>
-					<PropertyRef Name="DPNumber"/>
-					<PropertyRef Name="Tower"/>
-				</Key>
-				<Property Name="DPNumber" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DP Number"/>
-				<Property Name="Tower" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Tower"/>
-				<Property Name="FSIArea" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FSIArea"/>
-				<Property Name="OfficeArea" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="OfficeArea"/>
-				<Property Name="EfficiencyPercentage" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="EfficiencyPercentage"/>
-				<Property Name="Amenities" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Amenities"/>
-				<Property Name="AmenitiesEfficiency" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="AmenitiesEfficiency"/>
-				<Property Name="TotalLeaseableArea" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="TotalLeaseableArea"/>
-				<Property Name="LeaseableAreaEfficiency" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="LeaseableAreaEfficiency"/>
-				<Property Name="CarParksCount" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CarParksCount"/>
-				<Property Name="NumberOfBasements" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="NumberOfBasements"/>
-				<Property Name="StartDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date"
-					sap:label="StartDate"/>
-				<Property Name="EndDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date"
-					sap:label="EndDate"/>
-				<Property Name="ApprovalPermits" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="ApprovalPermits"/>
-				<Property Name="FSICosts" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FSICosts"/>
-				<Property Name="ConstructionCost" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="ConstructionCost"/>
-				<Property Name="AmenitiesFitOut" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="AmenitiesFitOut"/>
-				<Property Name="ApprovalPermits2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="ApprovalPermits2"/>
-				<Property Name="FSICosts2" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FSICosts2"/>
-				<Property Name="ConstructionCost1" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="ConstructionCost1"/>
-				<Property Name="AmenitiesFitOut2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
-			</EntityType>
-			<EntityType Name="Capital">
-				<Key>
-					<PropertyRef Name="DPNumber"/>
-					<PropertyRef Name="Tower"/>
-				</Key>
-				<Property Name="DPNumber" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DP Number"/>
-				<Property Name="Tower" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Tower"/>
-				<Property Name="ConstructionFunding" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="ConstructionFunding"/>
-				<Property Name="ConstDebtEquityPer" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="ConstDebtEquityPer"/>
-				<Property Name="ConstDebtIntRatePer" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="ConstDebtIntRatePer"/>
-				<Property Name="ProcessingFees" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ProcessingFees"/>
-				<Property Name="AcquisitionFunding" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="AcquisitionFunding"/>
-				<Property Name="AcqDebtEquityPer" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="AcqDebtEquityPer"/>
-				<Property Name="AcqDebtIntRatePer" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="AcqDebtIntRatePer"/>
-				<Property Name="AcqProcessingFees" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="AcqProcessingFees"/>
-				<Property Name="Others" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Others"/>
-				<Property Name="Equity" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Equity"/>
-				<Property Name="PostConstruction" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="PostConstruction"/>
-				<Property Name="LRDPotential" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="LRDPotential"/>
-				<Property Name="LRDIntRatesPer" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="LRDIntRatesPer"/>
-				<Property Name="LRDProcessingFees" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="LRDProcessingFees"/>
-				<Property Name="DMFees" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DMFees"/>
-				<Property Name="DMApplicableGST" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="DMApplicableGST"/>
-				<Property Name="PMFees" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PMFees"/>
-				<Property Name="PMApplicableGST" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="PMApplicableGST"/>
-			</EntityType>
-			<EntityType Name="Revenue">
-				<Key>
-					<PropertyRef Name="DPNumber"/>
-					<PropertyRef Name="Tower"/>
-				</Key>
-				<Property Name="DPNumber" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DP Number"/>
-				<Property Name="Tower" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Towers"/>
-				<Property Name="RFPSignedAvg" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RFPSignedAvg"/>
-				<Property Name="WarmShellRent" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WarmShellRent"/>
-				<Property Name="WarmShellRentAmenities" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="WarmShellRentAmenities"/>
-				<Property Name="TargetAvgRentals" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="TargetAvgRentals"/>
-				<Property Name="CAMProfits" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CAMProfits"/>
-				<Property Name="PreLeasing" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PreLeasing"/>
-				<Property Name="OtherMilestone" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="OtherMilestone"/>
-				<Property Name="AllPerLeasingBy" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="AllPerLeasingBy"/>
-				<Property Name="PreLeasing2" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PreLeasing2"/>
-				<Property Name="AllPerLeasingBy2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
-				<Property Name="SecurityDeposit" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName1"/>
-				<Property Name="RentFreePeriod" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RentFreePeriod"/>
-				<Property Name="BrokerageBudgets" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
-					sap:label="BrokerageBudgets"/>
-				<Property Name="Marketing" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Marketing"/>
-				<Property Name="Others" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
-			</EntityType>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="http://rmzsapecdapp.rmzcorp.com:8001/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/$metadata"/>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="http://rmzsapecdapp.rmzcorp.com:8001/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/$metadata"/>
 		</Schema>
 	</edmx:DataServices>
 </edmx:Edmx>

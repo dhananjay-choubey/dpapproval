@@ -203,7 +203,7 @@ sap.ui.define([
 			var sBindingElement = this.getView().getElementBinding();
 			var sModel = sBindingElement.getModel();
 			var sData = sModel.getProperty(sBindingElement.getPath());
-			var sMessage = this.getResourceBundle().getText("approvalRejMsg", [sAction, sData.DPNumber, sData.CreatedByName]);
+			var sMessage = this.getResourceBundle().getText("approvalRejMsg", [sAction, sData.DPNumber, sData.CreatedByID]);
 
 			var dialog = new Dialog({
 				title: sAction,

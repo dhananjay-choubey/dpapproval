@@ -20,12 +20,11 @@
 					</Toolbar>
 				</infoToolbar>
 				<items>
-					<ObjectListItem intro="" title="{DPNumber}"
-						number="{path: 'Total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" numberUnit="INR CR" numberState="None"
-						type="Active" selected="true" showMarkers="false" press="onObjectListItemPress">
+					<ObjectListItem intro="" title="{DPNumber}" number="{Total}" numberUnit="INR CR" numberState="None" type="Active" selected="true"
+						showMarkers="false" press="onObjectListItemPress">
 						<attributes>
 							<ObjectAttribute title="Version" text="{Version}" active="false" visible="true"/>
-							<ObjectAttribute title="Creator" text="{CreatedByName}" active="false" visible="true"/>
+							<ObjectAttribute title="Creator" text="{CreatedByID}" active="false" visible="true"/>
 						</attributes>
 						<firstStatus>
 							<ObjectStatus title="Created" text="{path: 'CreationDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"

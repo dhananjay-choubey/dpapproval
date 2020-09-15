@@ -5,12 +5,11 @@
 		<content>
 			<layout:VerticalLayout width="100%" visible="true">
 				<layout:content>
-					<ObjectHeader intro="" title="{DPNumber}" icon=""
-						number="{path: 'Total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" numberUnit="INR CR" numberState="None"
-						titleActive="false" backgroundDesign="Transparent" condensed="false" visible="true" titlePress="_onObjectHeaderTitlePress">
+					<ObjectHeader intro="" title="{DPNumber}" icon="" number="{Total}" numberUnit="INR CR" numberState="None" titleActive="false"
+						backgroundDesign="Transparent" condensed="false" visible="true" titlePress="_onObjectHeaderTitlePress">
 						<attributes>
-							<ObjectAttribute title="Creator" text="{CreatedByName}" active="false" visible="true" press="_onObjectAttributePress"/>
-							<ObjectAttribute title="Last Approver" text="{PreviousApproverName}" active="false" visible="true"/>
+							<ObjectAttribute title="Creator" text="{CreatedByID}" active="false" visible="true" press="_onObjectAttributePress"/>
+							<ObjectAttribute title="Previous Approver" text="{PreviousApproverID}" active="false" visible="true"/>
 						</attributes>
 						<statuses>
 							<ObjectStatus title="Created On" text="{path: 'CreationDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"

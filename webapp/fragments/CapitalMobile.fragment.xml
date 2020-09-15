@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
-		items="{path:'Capital', templateShareable:true}" visible="true">
+		items="{path:'CapitalSet', templateShareable:true}" visible="true">
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
@@ -124,29 +124,21 @@
 					<Text text="{ConstructionFunding}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{ConstDebtEquityPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{ConstDebtIntRatePer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'ProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{ProcessingFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{AcquisitionFunding}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{AcqDebtEquityPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{AcqDebtIntRatePer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'AcqProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{AcqProcessingFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{Others}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'Equity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{Equity}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{PostConstruction}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{LRDPotential}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{LRDIntRatesPer}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'LRDProcessingFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'DMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'DMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'PMFees', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'PMApplicableGST', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{LRDProcessingFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{DMFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{DMApplicableGST}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{PMFees}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{PMApplicableGST}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</cells>
 			</ColumnListItem>
 		</items>

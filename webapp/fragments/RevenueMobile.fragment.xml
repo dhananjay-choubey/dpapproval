@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
-		items="{path:'Revenue', templateShareable:true}" visible="true">
+		items="{path:'RevenueSet', templateShareable:true}" visible="true">
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
@@ -103,27 +103,24 @@
 			<ColumnListItem type="Inactive">
 				<cells>
 					<Text text="{Tower}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'RFPSignedAvg', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'WarmShellRent', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{RFPSignedAvg}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{WarmShellRent}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{WarmShellRentAmenities}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'TargetAvgRentals', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+					<Text text="{TargetAvgRentals}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{CAMProfits}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'PreLeasing', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" wrapping="true"
+						textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'OtherMilestone', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto"
 						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'CAMProfits', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'PreLeasing', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{OtherMilestone}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AllPerLeasingBy}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'PreLeasing2', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" wrapping="true"
-						textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{AllPerLeasingBy2}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'SecurityDeposit', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
+					<Text text="{path: 'AllPerLeasingBy', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto"
 						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'PreLeasing2', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{path: 'AllPerLeasingBy2', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto"
+						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{SecurityDeposit}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{RentFreePeriod}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-					<Text text="{path: 'BrokerageBudgets', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto"
-						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Text text="{BrokerageBudgets}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{Marketing}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{Others}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</cells>
