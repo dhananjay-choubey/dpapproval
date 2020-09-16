@@ -11,9 +11,10 @@
 		<content>
 			<PullToRefresh id="pullToRefresh" visible="{device>/support/touch}" refresh="onRefresh"/>
 			<!--  For client side filtering add this to the items attribute:  parameters: {operationMode: 'Client'}}"  -->
-			<List id="list" items="{path:'/DPHeaderDataSet', templateShareable:true}" busyIndicatorDelay="{masterView>/delay}"
-				noDataText="{masterView>/noDataText}" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true"
-				growingThreshold="10" growingScrollToLoad="true" updateFinished="onUpdateFinished" selectionChange="onSelectionChange">
+			<List id="list" items="{path:'/DPHeaderDataSet', templateShareable:true, parameters: {operationMode: 'Client'}}"
+				busyIndicatorDelay="{masterView>/delay}" noDataText="{masterView>/noDataText}"
+				mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true" growingThreshold="10" growingScrollToLoad="true"
+				updateFinished="onUpdateFinished" selectionChange="onSelectionChange">
 				<infoToolbar>
 					<Toolbar active="true" id="filterBar" visible="{masterView>/isFilterBarVisible}" press="onOpenViewSettings">
 						<Title id="filterBarLabel" text="{masterView>/filterBarLabel}"/>

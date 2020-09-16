@@ -27,7 +27,7 @@ sap.ui.define([
 			},
 			"config": {
 				"i18nBundle": "com.rmz.dpapproval.i18n.i18n",
-				"serviceUrl": "/here/goes/your/serviceUrl/",
+				"serviceUrl": "/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/",
 				"icon": "",
 				"favIcon": "",
 				"phone": "",
@@ -35,8 +35,8 @@ sap.ui.define([
 				"tablet": "",
 				"tablet@2": "",
 				"serviceConfig": {
-					"name": "3141f45694a559cb140f9531",
-					"serviceUrl": "/here/goes/your/serviceurl/"
+					"name": "ZPROJ_DP_APPROVAL_SRV",
+					"serviceUrl": "/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/"
 				}
 			},
 			"routing": {
@@ -110,13 +110,14 @@ sap.ui.define([
 			//this.setModel(models.createFLPModel(), "FLP");
 			// create and set the ODataModel
 			var oModel = models.createODataModel({
-				/*urlParametersForEveryRequest: [
-					"sap-server",
-					"sap-client",
-					"sap-language"
-				],*/
+				// urlParametersForEveryRequest: [
+				// 	"sap-server",
+				// 	"sap-client",
+				// 	"sap-language"
+				// ],
 				url: this.getMetadata().getConfig().serviceUrl
 			});
+			oModel.setUseBatch(false);
 			this.setModel(oModel);
 			this._createMetadataPromise(oModel);
 			// set the i18n model

@@ -84,7 +84,7 @@ sap.ui.define([
 
 			if (!oOptions.url) {
 				jQuery.sap.log.error("Please provide a url when you want to create an ODataModel",
-					"sap/ui/demo/masterdetail.model.models.createODataModel");
+					"com/rmz/dpapproval.model.models.createODataModel");
 				return null;
 			}
 

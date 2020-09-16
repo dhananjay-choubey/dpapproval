@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
-		items="{path:'RevenueSet', templateShareable:true}" visible="true">
+		items="{path:'GrowthRevenue', templateShareable:true}" visible="true">
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
@@ -102,7 +102,7 @@
 		<items>
 			<ColumnListItem type="Inactive">
 				<cells>
-					<Text text="{Tower}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<ObjectIdentifier title="{Tower}" text="" titleActive="false" visible="true"/>
 					<Text text="{RFPSignedAvg}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{WarmShellRent}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{WarmShellRentAmenities}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>

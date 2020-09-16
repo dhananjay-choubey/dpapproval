@@ -1,107 +1,107 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:table="sap.ui.table">
 	<table:Table selectionMode="None" showNoData="true" fixedColumnCount="1" enableColumnFreeze="false" enableSelectAll="false"
 		showColumnVisibilityMenu="false" enableCellFilter="false" enableColumnReordering="false" visibleRowCountMode="Fixed"
-		rows="{path:'RevenueSet', templateShareable:true}" enableBusyIndicator="true" fixedRowCount="0" alternateRowColors="true"
+		rows="{path:'GrowthRevenue', templateShareable:true}" enableBusyIndicator="true" fixedRowCount="0" alternateRowColors="true"
 		fixedBottomRowCount="0" visibleRowCount="5" visible="true">
 		<!--  sap.ui.core.Control  -->
 		<table:columns>
-			<table:Column width="7rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>towers}" wrapping="true"/>
+			<table:Column width="5rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
+				<Text text="{i18n>towers}" tooltip="{i18n>towers}" wrapping="true"/>
 				<table:template>
 					<Text text="{Tower}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>RFPSignedAvgRental}" wrapping="true"/>
+				<Text text="{i18n>RFPSignedAvgRental}" tooltip="{i18n>RFPSignedAvgRental}" wrapping="true"/>
 				<table:template>
 					<Text text="{RFPSignedAvg}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>warmShellRentOffice}" wrapping="true"/>
+				<Text text="{i18n>warmShellRentOffice}" tooltip="{i18n>warmShellRentOffice}" wrapping="true"/>
 				<table:template>
 					<Text text="{WarmShellRent}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>warmShellRentAmenities}" wrapping="true"/>
+				<Text text="{i18n>warmShellRentAmenities}" tooltip="{i18n>warmShellRentAmenities}" wrapping="true"/>
 				<table:template>
 					<Text text="{WarmShellRentAmenities}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>targetAverageRentals}" wrapping="true"/>
+				<Text text="{i18n>targetAverageRentals}" tooltip="{i18n>targetAverageRentals}" wrapping="true"/>
 				<table:template>
 					<Text text="{TargetAvgRentals}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>CAMProfits}" wrapping="true"/>
+				<Text text="{i18n>CAMProfits}" tooltip="{i18n>CAMProfits}" wrapping="true"/>
 				<table:template>
 					<Text text="{CAMProfits}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>preleasing}" wrapping="true"/>
+				<Text text="{i18n>preleasing}" tooltip="{i18n>preleasing}" wrapping="true"/>
 				<table:template>
 					<Text text="{path: 'PreLeasing', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" wrapping="true"
 						textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>othermilestone}" wrapping="true"/>
+				<Text text="{i18n>othermilestone}" tooltip="{i18n>othermilestone}" wrapping="true"/>
 				<table:template>
 					<Text text="{path: 'OtherMilestone', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto"
 						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>fullLeasingBy}" wrapping="true"/>
+				<Text text="{i18n>fullLeasingBy}" tooltip="{i18n>fullLeasingBy}" wrapping="true"/>
 				<table:template>
 					<Text text="{path: 'AllPerLeasingBy', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto"
 						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>preleasing}" wrapping="true"/>
+				<Text text="{i18n>preleasing}" tooltip="{i18n>preleasing}" wrapping="true"/>
 				<table:template>
 					<Text text="{path: 'PreLeasing2', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto"
 						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>fullLeasingBy}" wrapping="true"/>
+				<Text text="{i18n>fullLeasingBy}" tooltip="{i18n>fullLeasingBy}" wrapping="true"/>
 				<table:template>
 					<Text text="{path: 'AllPerLeasingBy2', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto"
 						wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>securityDeposit}" wrapping="true"/>
+				<Text text="{i18n>securityDeposit}" tooltip="{i18n>securityDeposit}" wrapping="true"/>
 				<table:template>
 					<Text text="{SecurityDeposit}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>rentFreePeriod}" wrapping="true"/>
+				<Text text="{i18n>rentFreePeriod}" tooltip="{i18n>rentFreePeriod}" wrapping="true"/>
 				<table:template>
 					<Text text="{RentFreePeriod}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>brokerageBudgets}" wrapping="true"/>
+				<Text text="{i18n>brokerageBudgets}" tooltip="{i18n>brokerageBudgets}" wrapping="true"/>
 				<table:template>
 					<Text text="{BrokerageBudgets}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>marketing}" wrapping="true"/>
+				<Text text="{i18n>marketing}" tooltip="{i18n>marketing}" wrapping="true"/>
 				<table:template>
 					<Text text="{Marketing}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>others}" wrapping="true"/>
+				<Text text="{i18n>others}" tooltip="{i18n>others}" wrapping="true"/>
 				<table:template>
 					<Text text="{Others}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				</table:template>

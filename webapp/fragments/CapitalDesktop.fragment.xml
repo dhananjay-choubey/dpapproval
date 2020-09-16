@@ -1,120 +1,120 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:table="sap.ui.table">
 	<table:Table selectionMode="None" showNoData="true" fixedColumnCount="1" enableColumnFreeze="false" enableSelectAll="false"
 		showColumnVisibilityMenu="false" enableCellFilter="false" enableColumnReordering="false" visibleRowCountMode="Fixed"
-		rows="{path:'CapitalSet', templateShareable:true}" enableBusyIndicator="true" fixedRowCount="0" alternateRowColors="true"
+		rows="{path:'GrowthCapital', templateShareable:true}" enableBusyIndicator="true" fixedRowCount="0" alternateRowColors="true"
 		fixedBottomRowCount="0" visibleRowCount="5" visible="true">
 		<!--  sap.ui.core.Control  -->
 		<table:columns>
-			<table:Column width="7rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
-				<Label text="{i18n>towers}" wrapping="true"/>
+			<table:Column width="5rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="Begin">
+				<Text text="{i18n>towers}" tooltip="{i18n>towers}" wrapping="true"/>
 				<table:template>
 					<ObjectIdentifier title="" text="{Tower}" titleActive="false" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>constructionFunding}" wrapping="true"/>
+				<Text text="{i18n>constructionFunding}" tooltip="{i18n>constructionFunding}" wrapping="true"/>
 				<table:template>
 					<Text text="{ConstructionFunding}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>constructionDebtPer}" wrapping="true"/>
+				<Text text="{i18n>constructionDebtPer}" tooltip="{i18n>constructionDebtPer}" wrapping="true"/>
 				<table:template>
 					<Text text="{ConstDebtEquityPer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>constructionDebtInt}" wrapping="true"/>
+				<Text text="{i18n>constructionDebtInt}" tooltip="{i18n>constructionDebtInt}" wrapping="true"/>
 				<table:template>
 					<Text text="{ConstDebtIntRatePer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>processingFees}" wrapping="true"/>
+				<Text text="{i18n>processingFees}" tooltip="{i18n>processingFees}" wrapping="true"/>
 				<table:template>
 					<Text text="{ProcessingFees}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>acquisitionFunding}" wrapping="true"/>
+				<Text text="{i18n>acquisitionFunding}" tooltip="{i18n>acquisitionFunding}" wrapping="true"/>
 				<table:template>
 					<Text text="{AcquisitionFunding}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>acquisitionDebtPer}" wrapping="true"/>
+				<Text text="{i18n>acquisitionDebtPer}" tooltip="{i18n>acquisitionDebtPer}" wrapping="true"/>
 				<table:template>
 					<Text text="{AcqDebtEquityPer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>acquisitionDebtInt}" wrapping="true"/>
+				<Text text="{i18n>acquisitionDebtInt}" tooltip="{i18n>acquisitionDebtInt}" wrapping="true"/>
 				<table:template>
 					<Text text="{AcqDebtIntRatePer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>processingFees}" wrapping="true"/>
+				<Text text="{i18n>processingFees}" tooltip="{i18n>processingFees}" wrapping="true"/>
 				<table:template>
 					<Text text="{AcqProcessingFees}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>others}" wrapping="true"/>
+				<Text text="{i18n>others}" tooltip="{i18n>others}" wrapping="true"/>
 				<table:template>
 					<Text text="{Others}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>equity}" wrapping="true"/>
+				<Text text="{i18n>equity}" tooltip="{i18n>equity}" wrapping="true"/>
 				<table:template>
 					<Text text="{Equity}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>postConstruction}" wrapping="true"/>
+				<Text text="{i18n>postConstruction}" tooltip="{i18n>postConstruction}" wrapping="true"/>
 				<table:template>
 					<Text text="{PostConstruction}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>LRDPotential}" wrapping="true"/>
+				<Text text="{i18n>LRDPotential}" tooltip="{i18n>LRDPotential}" wrapping="true"/>
 				<table:template>
 					<Text text="{LRDPotential}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>LRDInterestRatesPer}" wrapping="true"/>
+				<Text text="{i18n>LRDInterestRatesPer}" tooltip="{i18n>LRDInterestRatesPer}" wrapping="true"/>
 				<table:template>
 					<Text text="{LRDIntRatesPer}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>LRDProcessingFees}" wrapping="true"/>
+				<Text text="{i18n>LRDProcessingFees}" tooltip="{i18n>LRDProcessingFees}" wrapping="true"/>
 				<table:template>
 					<Text text="{LRDProcessingFees}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>DMFees}" wrapping="true"/>
+				<Text text="{i18n>DMFees}" tooltip="{i18n>DMFees}" wrapping="true"/>
 				<table:template>
 					<Text text="{DMFees}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>applicableGST}" wrapping="true"/>
+				<Text text="{i18n>applicableGST}" tooltip="{i18n>applicableGST}" wrapping="true"/>
 				<table:template>
 					<Text text="{DMApplicableGST}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>PMFees}" wrapping="true"/>
+				<Text text="{i18n>PMFees}" tooltip="{i18n>PMFees}" wrapping="true"/>
 				<table:template>
 					<Text text="{PMFees}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>
 			</table:Column>
 			<table:Column width="10rem" resizable="true" showFilterMenuEntry="false" showSortMenuEntry="false" autoResizable="true" hAlign="End">
-				<Label text="{i18n>applicableGST}" wrapping="true"/>
+				<Text text="{i18n>applicableGST}" toolti="{i18n>applicableGST}" wrapping="true"/>
 				<table:template>
 					<Text text="{PMApplicableGST}" width="auto" wrapping="true" textAlign="End" textDirection="Inherit" visible="true"/>
 				</table:template>

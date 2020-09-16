@@ -130,6 +130,9 @@ sap.ui.define([
 
 			this.getView().bindElement({
 				path: sObjectPath,
+				parameters: {
+					expand: "GrowthDevelopment,GrowthCapital,GrowthRevenue"
+				},
 				events: {
 					change: this._onBindingChange.bind(this),
 					dataRequested: function () {

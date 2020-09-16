@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
-		items="{path:'DevelopmentSet', templateShareable:true}" visible="true">
+		items="{path:'GrowthDevelopment', templateShareable:true}" visible="true">
 		<columns>
 			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 				<header>
@@ -126,7 +126,7 @@
 		<items>
 			<ColumnListItem type="Inactive">
 				<cells>
-					<Text text="{Tower}"/>
+					<ObjectIdentifier title="{Tower}" text="" titleActive="false" visible="true"/>
 					<Text text="{FSIArea}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{OfficeArea}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
 					<Text text="{EfficiencyPercentage}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>

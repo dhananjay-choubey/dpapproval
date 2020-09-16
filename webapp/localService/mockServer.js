@@ -6,7 +6,7 @@ sap.ui.define([
 		init: function () {
 			// create
 			var oMockServer = new MockServer({
-				rootUri: "/here/goes/your/serviceUrl/"
+				rootUri: "/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/"
 			});
 			// simulate
 			var sPath = jQuery.sap.getModulePath("com.rmz.dpapproval.localService");

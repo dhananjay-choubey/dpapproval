@@ -28,13 +28,13 @@
 							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.GrowthMobile" type="XML"/>
 						</content>
 					</IconTabFilter>
-					<IconTabFilter icon="sap-icon://action-settings" iconColor="Positive" text="Development" count="" design="Vertical" showAll="false"
+					<IconTabFilter icon="sap-icon://action-settings" iconColor="Critical" text="Development" count="" design="Vertical" showAll="false"
 						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false" id="devITFId">
 						<content>
 							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.DevelopmentForm" type="XML"/>
 						</content>
 					</IconTabFilter>
-					<IconTabFilter icon="sap-icon://capital-projects" iconColor="Critical" text="Capital" count="" design="Vertical" showAll="false"
+					<IconTabFilter icon="sap-icon://capital-projects" iconColor="Positive" text="Capital" count="" design="Vertical" showAll="false"
 						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false" id="capITFId"/>
 					<IconTabFilter icon="sap-icon://money-bills" iconColor="Negative" text="Revenue" count="" design="Vertical" showAll="false"
 						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false" id="revITFId"/>
