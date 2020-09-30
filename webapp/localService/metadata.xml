@@ -2,6 +2,26 @@
 	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
 	<edmx:DataServices m:DataServiceVersion="2.0">
 		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZPROJ_DP_APPROVAL_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="ApproverComments" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="DPNumber"/>
+					<PropertyRef Name="Level"/>
+				</Key>
+				<Property Name="DPNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DP number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Level" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Level of approval"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ApproverName" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Approver"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Date" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Approved/Rejected on" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Time" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Approved/Rejected at"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Comment" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:label="Approval Comments"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="DPHeaderData" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_ApproverComments"
+					FromRole="ToRole_Growth_ApproverComments" ToRole="FromRole_Growth_ApproverComments"/>
+			</EntityType>
 			<EntityType Name="DPHeaderData" sap:content-version="1">
 				<Key>
 					<PropertyRef Name="DPNumber"/>
@@ -10,15 +30,21 @@
 					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
 				<Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="DP Version" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TaskType" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Transaction Type"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Time" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Approved/Rejected at"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
 				<Property Name="WorkitemID" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="ID" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-				<Property Name="TaskType" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:label="Transaction Type"
-					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
 				<Property Name="CreatedByID" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Created by"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="CreatedByName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Created by Name"
 					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
 				<Property Name="CreationDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Created On" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
 				<Property Name="PreviousApproverID" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PreviousApproverName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="PreviousApproverName"
 					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
 				<Property Name="PreConstStartDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Pre-Cons. Start date"
 					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
@@ -54,6 +80,24 @@
 					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
 				<Property Name="Total" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:label="Total (INR Cr)"
 					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Action" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Action" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Comment" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Response" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Response" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Level" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Level" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="RG_Comment" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Growth Rejection Comment"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="RD_Comment" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Development Rejection Comment"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="RC_Comment" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Capital Rejection Comment"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="RR_Comment" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Revenue Rejection Comment"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="GrowthApproverComments" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_ApproverComments"
+					FromRole="FromRole_Growth_ApproverComments" ToRole="ToRole_Growth_ApproverComments"/>
 				<NavigationProperty Name="GrowthDevelopment" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Development" FromRole="FromRole_Growth_Development"
 					ToRole="ToRole_Growth_Development"/>
 				<NavigationProperty Name="GrowthCapital" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Capital" FromRole="FromRole_Growth_Capital"
@@ -205,6 +249,18 @@
 				<NavigationProperty Name="DPHeaderData" Relationship="ZPROJ_DP_APPROVAL_SRV.Growth_Revenue" FromRole="ToRole_Growth_Revenue"
 					ToRole="FromRole_Growth_Revenue"/>
 			</EntityType>
+			<Association Name="Growth_Development" sap:content-version="1">
+				<End Type="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" Multiplicity="1" Role="FromRole_Growth_Development"/>
+				<End Type="ZPROJ_DP_APPROVAL_SRV.Development" Multiplicity="*" Role="ToRole_Growth_Development"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Growth_Development">
+						<PropertyRef Name="DPNumber"/>
+					</Principal>
+					<Dependent Role="ToRole_Growth_Development">
+						<PropertyRef Name="DPNumber"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
 			<Association Name="Growth_Capital" sap:content-version="1">
 				<End Type="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" Multiplicity="1" Role="FromRole_Growth_Capital"/>
 				<End Type="ZPROJ_DP_APPROVAL_SRV.Capital" Multiplicity="*" Role="ToRole_Growth_Capital"/>
@@ -229,19 +285,21 @@
 					</Dependent>
 				</ReferentialConstraint>
 			</Association>
-			<Association Name="Growth_Development" sap:content-version="1">
-				<End Type="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" Multiplicity="1" Role="FromRole_Growth_Development"/>
-				<End Type="ZPROJ_DP_APPROVAL_SRV.Development" Multiplicity="*" Role="ToRole_Growth_Development"/>
+			<Association Name="Growth_ApproverComments" sap:content-version="1">
+				<End Type="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" Multiplicity="1" Role="FromRole_Growth_ApproverComments"/>
+				<End Type="ZPROJ_DP_APPROVAL_SRV.ApproverComments" Multiplicity="*" Role="ToRole_Growth_ApproverComments"/>
 				<ReferentialConstraint>
-					<Principal Role="FromRole_Growth_Development">
+					<Principal Role="FromRole_Growth_ApproverComments">
 						<PropertyRef Name="DPNumber"/>
 					</Principal>
-					<Dependent Role="ToRole_Growth_Development">
+					<Dependent Role="ToRole_Growth_ApproverComments">
 						<PropertyRef Name="DPNumber"/>
 					</Dependent>
 				</ReferentialConstraint>
 			</Association>
 			<EntityContainer Name="ZPROJ_DP_APPROVAL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="ApproverCommentsSet" EntityType="ZPROJ_DP_APPROVAL_SRV.ApproverComments" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
 				<EntitySet Name="DPHeaderDataSet" EntityType="ZPROJ_DP_APPROVAL_SRV.DPHeaderData" sap:creatable="false" sap:updatable="false"
 					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
 				<EntitySet Name="DevelopmentSet" EntityType="ZPROJ_DP_APPROVAL_SRV.Development" sap:creatable="false" sap:updatable="false"
@@ -250,6 +308,11 @@
 					sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
 				<EntitySet Name="RevenueSet" EntityType="ZPROJ_DP_APPROVAL_SRV.Revenue" sap:creatable="false" sap:updatable="false" sap:deletable="false"
 					sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<AssociationSet Name="Growth_ApproverCommentsSet" Association="ZPROJ_DP_APPROVAL_SRV.Growth_ApproverComments" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="DPHeaderDataSet" Role="FromRole_Growth_ApproverComments"/>
+					<End EntitySet="ApproverCommentsSet" Role="ToRole_Growth_ApproverComments"/>
+				</AssociationSet>
 				<AssociationSet Name="Growth_RevenueSet" Association="ZPROJ_DP_APPROVAL_SRV.Growth_Revenue" sap:creatable="false" sap:updatable="false"
 					sap:deletable="false" sap:content-version="1">
 					<End EntitySet="DPHeaderDataSet" Role="FromRole_Growth_Revenue"/>
@@ -267,9 +330,9 @@
 				</AssociationSet>
 			</EntityContainer>
 			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
-				href="http://ecdapp.rmzcorp.com:8001/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/$metadata"/>
+				href="http://rmzsapecdapp.rmzcorp.com:8001/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/$metadata"/>
 			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
-				href="http://ecdapp.rmzcorp.com:8001/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/$metadata"/>
+				href="http://rmzsapecdapp.rmzcorp.com:8001/sap/opu/odata/SAP/ZPROJ_DP_APPROVAL_SRV/$metadata"/>
 		</Schema>
 	</edmx:DataServices>
 </edmx:Edmx>

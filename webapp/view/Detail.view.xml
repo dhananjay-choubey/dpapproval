@@ -5,16 +5,16 @@
 		<content>
 			<layout:VerticalLayout width="100%" visible="true">
 				<layout:content>
-					<ObjectHeader intro="" title="{DPNumber}" icon="" number="{Total}" numberUnit="INR CR" numberState="None" titleActive="false"
+					<ObjectHeader intro="" title="{DPNumber}" icon="" number="{Total}" numberUnit="{i18n>inrInCR}" numberState="Error" titleActive="false"
 						backgroundDesign="Transparent" condensed="false" visible="true" titlePress="_onObjectHeaderTitlePress">
 						<attributes>
-							<ObjectAttribute title="Creator" text="{CreatedByID}" active="false" visible="true" press="_onObjectAttributePress"/>
-							<ObjectAttribute title="Previous Approver" text="{PreviousApproverID}" active="false" visible="true"/>
+							<ObjectAttribute title="{i18n>creator}" text="{CreatedByID}" active="false" visible="true" press="_onObjectAttributePress"/>
+							<ObjectAttribute title="{i18n>previousApprover}" text="{PreviousApproverID}" active="false" visible="true"/>
 						</attributes>
 						<statuses>
-							<ObjectStatus title="Created On" text="{path: 'CreationDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"
-								state="None" visible="true"/>
-							<ObjectStatus title="Version" text="{Version}" state="None" visible="true"/>
+							<ObjectStatus title="{i18n>createdOn}"
+								text="{path: 'CreationDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" state="Success" visible="true"/>
+							<ObjectStatus title="{i18n>version}" text="{Version}" state="None" visible="true"/>
 						</statuses>
 					</ObjectHeader>
 				</layout:content>
@@ -22,29 +22,29 @@
 			<IconTabBar expandable="true" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
 				selectedKey="Ok">
 				<items>
-					<IconTabFilter icon="sap-icon://drill-up" iconColor="Default" text="Growth" count="" design="Vertical" enabled="true" showAll="false"
+					<IconTabFilter icon="sap-icon://drill-up" iconColor="Default" text="{i18n>growth}" count="" design="Vertical" enabled="true" showAll="false"
 						textDirection="Inherit" visible="true">
 						<content>
 							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.GrowthMobile" type="XML"/>
 						</content>
 					</IconTabFilter>
-					<IconTabFilter icon="sap-icon://action-settings" iconColor="Critical" text="Development" count="" design="Vertical" showAll="false"
+					<IconTabFilter icon="sap-icon://action-settings" iconColor="Critical" text="{i18n>development}" count="" design="Vertical" showAll="false"
 						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false" id="devITFId">
 						<content>
 							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.DevelopmentForm" type="XML"/>
 						</content>
 					</IconTabFilter>
-					<IconTabFilter icon="sap-icon://capital-projects" iconColor="Positive" text="Capital" count="" design="Vertical" showAll="false"
+					<IconTabFilter icon="sap-icon://capital-projects" iconColor="Positive" text="{i18n>capital}" count="" design="Vertical" showAll="false"
 						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false" id="capITFId"/>
-					<IconTabFilter icon="sap-icon://money-bills" iconColor="Negative" text="Revenue" count="" design="Vertical" showAll="false"
+					<IconTabFilter icon="sap-icon://money-bills" iconColor="Negative" text="{i18n>revenue}" count="" design="Vertical" showAll="false"
 						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false" id="revITFId"/>
-					<!--<IconTabFilter icon="sap-icon://comment" iconColor="Default" text="Comments"
+					<IconTabFilter icon="sap-icon://comment" iconColor="Neutral" text="Comments"
 						count="{path: 'NbNotes', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" design="Vertical" showAll="false"
 						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
 						<content>
 							<core:Fragment fragmentName="com.rmz.dpapproval.fragments.Comments" type="XML"/>
 						</content>
-					</IconTabFilter>-->
+					</IconTabFilter>
 				</items>
 				<content/>
 			</IconTabBar>

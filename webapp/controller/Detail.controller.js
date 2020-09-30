@@ -10,8 +10,9 @@ sap.ui.define([
 	"sap/m/VBox",
 	"sap/m/Button",
 	"sap/m/ButtonType",
-	"sap/m/MessageToast"
-], function (BaseController, JSONModel, formatter, Device, Dialog, Text, TextArea, VBox, Button, ButtonType, MessageToast) {
+	"sap/m/MessageToast",
+	"sap/m/MessageBox"
+], function (BaseController, JSONModel, formatter, Device, Dialog, Text, TextArea, VBox, Button, ButtonType, MessageToast, MessageBox) {
 	"use strict";
 
 	return BaseController.extend("com.rmz.dpapproval.controller.Detail", {
@@ -131,7 +132,7 @@ sap.ui.define([
 			this.getView().bindElement({
 				path: sObjectPath,
 				parameters: {
-					expand: "GrowthDevelopment,GrowthCapital,GrowthRevenue"
+					expand: "GrowthDevelopment,GrowthCapital,GrowthRevenue,GrowthApproverComments"
 				},
 				events: {
 					change: this._onBindingChange.bind(this),
@@ -187,21 +188,27 @@ sap.ui.define([
 			oViewModel.setProperty("/delay", iOriginalViewBusyDelay);
 		},
 		_onApproveButtonPress: function (oEvent) {
-			this._executeAction("Approve");
+			this._executeActionApprove("Approve");
 		},
 		_onRejectButtonPress: function (oEvent) {
-			this._executeAction("Reject");
+			this._executeActionReject("Reject");
 		},
-		_prepareData: function (sData, sComment, sAction) {
+		_prepareDataApproval: function (sData, sComment, sAction) {
+			if (sAction === "Approve") {
+				sAction = "A";
+			} else {
+				sAction = "R";
+			}
 			return {
 				DPNumber: sData.DPNumber,
 				WorkitemID: sData.WorkitemID,
 				Version: sData.Version,
 				Comment: sComment,
-				Action: sAction
+				Action: sAction,
+				Level: sData.Level
 			};
 		},
-		_executeAction: function (sAction) {
+		_executeActionApprove: function (sAction) {
 			var that = this;
 			var sBindingElement = this.getView().getElementBinding();
 			var sModel = sBindingElement.getModel();
@@ -220,15 +227,16 @@ sap.ui.define([
 								wrapping: true
 							}),
 							new TextArea('submitDialogTextarea', {
-								placeholder: that.getResourceBundle().getText("mandtComment"),
+								placeholder: that.getResourceBundle().getText("optComment"),
 								rows: 4,
 								width: '100%',
-								visible: formatter.getTextAreaVisibility(sAction),
-								liveChange: function (oEvent) {
-									var sText = oEvent.getParameter('value').trim();
-									var parent = oEvent.getSource().getParent().getParent();
-									parent.getBeginButton().setEnabled(sText.length > 0);
-								}
+								visible: true
+									//								,
+									//								liveChange: function (oEvent) {
+									//									var sText = oEvent.getParameter('value').trim();
+									//									var parent = oEvent.getSource().getParent().getParent();
+									//									parent.getBeginButton().setEnabled(sText.length > 0);
+									//								}
 							})
 						]
 					})
@@ -237,10 +245,11 @@ sap.ui.define([
 				beginButton: new Button({
 					type: ButtonType.Emphasized,
 					text: 'Submit',
-					enabled: formatter.getSubmitButtonEnable(sAction),
+					enabled: true,
+					//enabled: formatter.getSubmitButtonEnable(sAction),
 					press: function () {
 						var sText = sap.ui.getCore().byId('submitDialogTextarea').getValue();
-						var sFinalData = that._prepareData(sData, sText, sAction);
+						var sFinalData = that._prepareDataApproval(sData, sText, sAction);
 						that._callService(sFinalData, sModel, sBindingElement.getPath());
 						dialog.close();
 					}
@@ -258,13 +267,333 @@ sap.ui.define([
 			dialog.open();
 		},
 		_callService: function (sData, oModel, sPath) {
+			var that = this;
 			oModel.update(sPath, sData, {
 				success: function (oData, oResponse) {
 					//MessageToast.show(oData.Response);
-					MessageToast.show("Approved/Rejected");
-					this.getRouter().navTo("master", true);
+					var sMsg;
+					if (sData.Action === "A") {
+						sMsg = sData.DPNumber + " has been approved."
+					} else {
+						sMsg = sData.DPNumber + " has been rejected."
+					}
+					sap.m.MessageBox.alert(sMsg, {
+						title: "Message",
+						onClose: function (oAction) {
+							that.getRouter().navTo("master", true);
+						},
+						initialFocus: sap.m.MessageBox.Action.OK
+					});
 				}.bind(this)
 			});
+		},
+		_executeActionReject: function (sAction) {
+
+			var that = this;
+			var sBindingElement = this.getView().getElementBinding();
+			var sModel = sBindingElement.getModel();
+			var sData = sModel.getProperty(sBindingElement.getPath());
+			var sMessage = this.getResourceBundle().getText("approvalRejMsg", [sAction, sData.DPNumber, sData.CreatedByID]);
+
+			var dialog = new Dialog({
+				title: sAction,
+				width: "40%",
+				type: "Message",
+				content: [
+					new VBox({
+						fitContainer: true,
+						items: [
+							new Text({
+								width: "100%",
+								text: sMessage,
+								wrapping: true
+							}),
+							new sap.m.VBox({
+								width: "100%",
+								fitContainer: true,
+								items: [
+									new sap.m.RadioButton("rejectAllRB", {
+										text: "Reject All",
+										groupName: "GroupA",
+										selected: true,
+										select: function (oEvent) {
+											if (oEvent.getParameter("selected")) {
+												sap.ui.getCore().byId("submitDialogTextareaRejectAll").setVisible(true);
+												sap.ui.getCore().byId("growthHBoxId").setVisible(false);
+												sap.ui.getCore().byId("devHBoxId").setVisible(false);
+												sap.ui.getCore().byId("capitalHBoxId").setVisible(false);
+												sap.ui.getCore().byId("revenueHBoxId").setVisible(false);
+											} else {
+												sap.ui.getCore().byId("submitDialogTextareaRejectAll").setVisible(false);
+												sap.ui.getCore().byId("growthHBoxId").setVisible(true);
+												sap.ui.getCore().byId("devHBoxId").setVisible(true);
+												sap.ui.getCore().byId("capitalHBoxId").setVisible(true);
+												sap.ui.getCore().byId("revenueHBoxId").setVisible(true);
+											}
+										}
+									}).addStyleClass("sapUiSmallMarginEnd"),
+									new TextArea('submitDialogTextareaRejectAll', {
+										placeholder: that.getResourceBundle().getText("mandtComment"),
+										rows: 3,
+										width: '100%',
+										visible: true
+									})
+
+								]
+							}),
+							new sap.m.VBox({
+								width: "100%",
+								items: [
+									new sap.m.RadioButton("rejectSpecificRB", {
+										text: "Reject Specific Process",
+										groupName: "GroupA",
+										selected: false,
+										select: function (oEvent) {
+											if (oEvent.getParameter("selected")) {
+												sap.ui.getCore().byId("submitDialogTextareaRejectAll").setVisible(false);
+												sap.ui.getCore().byId("growthHBoxId").setVisible(true);
+												sap.ui.getCore().byId("devHBoxId").setVisible(true);
+												sap.ui.getCore().byId("capitalHBoxId").setVisible(true);
+												sap.ui.getCore().byId("revenueHBoxId").setVisible(true);
+											} else {
+												sap.ui.getCore().byId("submitDialogTextareaRejectAll").setVisible(true);
+												sap.ui.getCore().byId("growthHBoxId").setVisible(false);
+												sap.ui.getCore().byId("devHBoxId").setVisible(false);
+												sap.ui.getCore().byId("capitalHBoxId").setVisible(false);
+												sap.ui.getCore().byId("revenueHBoxId").setVisible(false);
+											}
+										}
+									})
+
+								]
+							}),
+							new sap.m.VBox("growthHBoxId", {
+								width: "100%",
+								visible: false,
+								items: [
+									new sap.m.CheckBox("rejectGrowthCB", {
+										text: "Growth",
+										selected: false,
+										select: function (oEvent) {
+											if (oEvent.getParameter("selected")) {
+												sap.ui.getCore().byId("submitDialogTextareaRejectGrowth").setVisible(true);
+											} else {
+												sap.ui.getCore().byId("submitDialogTextareaRejectGrowth").setVisible(false);
+												sap.ui.getCore().byId("submitDialogTextareaRejectGrowth").setValue("");
+											}
+										}
+									}).addStyleClass("sapUiSmallMarginEnd"),
+									new TextArea('submitDialogTextareaRejectGrowth', {
+										placeholder: that.getResourceBundle().getText("mandtComment"),
+										rows: 3,
+										width: '100%',
+										visible: false
+									})
+
+								]
+							}),
+							new sap.m.VBox("devHBoxId", {
+								width: "100%",
+								visible: false,
+								items: [
+									new sap.m.CheckBox("rejectDevCB", {
+										text: "Development",
+										selected: false,
+										select: function (oEvent) {
+											if (oEvent.getParameter("selected")) {
+												sap.ui.getCore().byId("submitDialogTextareaRejectDev").setVisible(true);
+											} else {
+												sap.ui.getCore().byId("submitDialogTextareaRejectDev").setVisible(false);
+												sap.ui.getCore().byId("submitDialogTextareaRejectDev").setValue("");
+											}
+										}
+									}).addStyleClass("sapUiSmallMarginEnd"),
+									new TextArea('submitDialogTextareaRejectDev', {
+										placeholder: that.getResourceBundle().getText("mandtComment"),
+										rows: 3,
+										width: '100%',
+										visible: false
+									})
+
+								]
+							}),
+							new sap.m.VBox("capitalHBoxId", {
+								width: "100%",
+								visible: false,
+								items: [
+									new sap.m.CheckBox("rejectCapCB", {
+										text: "Capital",
+										selected: false,
+										select: function (oEvent) {
+											if (oEvent.getParameter("selected")) {
+												sap.ui.getCore().byId("submitDialogTextareaRejectCap").setVisible(true);
+											} else {
+												sap.ui.getCore().byId("submitDialogTextareaRejectCap").setVisible(false);
+												sap.ui.getCore().byId("submitDialogTextareaRejectCap").setValue("");
+											}
+										}
+									}).addStyleClass("sapUiSmallMarginEnd"),
+									new TextArea('submitDialogTextareaRejectCap', {
+										placeholder: that.getResourceBundle().getText("mandtComment"),
+										rows: 3,
+										width: '100%',
+										visible: false
+									})
+
+								]
+							}),
+							new sap.m.VBox("revenueHBoxId", {
+								width: "100%",
+								visible: false,
+								items: [
+									new sap.m.CheckBox("rejectRevCB", {
+										text: "Revenue",
+										selected: false,
+										select: function (oEvent) {
+											if (oEvent.getParameter("selected")) {
+												sap.ui.getCore().byId("submitDialogTextareaRejectRev").setVisible(true);
+											} else {
+												sap.ui.getCore().byId("submitDialogTextareaRejectRev").setVisible(false);
+												sap.ui.getCore().byId("submitDialogTextareaRejectRev").setValue("");
+											}
+										}
+									}).addStyleClass("sapUiSmallMarginEnd"),
+									new TextArea('submitDialogTextareaRejectRev', {
+										placeholder: that.getResourceBundle().getText("mandtComment"),
+										rows: 3,
+										width: '100%',
+										visible: false
+									})
+
+								]
+							})
+						]
+					})
+
+				],
+				beginButton: new Button({
+					type: ButtonType.Emphasized,
+					text: 'Submit',
+					enabled: true,
+					//enabled: formatter.getSubmitButtonEnable(sAction),
+					press: function () {
+						//						var sText = sap.ui.getCore().byId('submitDialogTextarea').getValue();
+						//						var sFinalData = that._prepareDataApproval(sData, sText, sAction);
+						//						that._callService(sFinalData, sModel, sBindingElement.getPath());
+						//						dialog.close();
+						//Check which rejection type is selected
+						var sAllComment = "",
+							sGrowthComment = "",
+							sDevComment = "",
+							sCapComment = "",
+							sRevComment = "";
+						var sErrorFlag = false,
+							sErrorMessage = "";
+						if (sap.ui.getCore().byId("rejectAllRB").getSelected()) {
+							if (sap.ui.getCore().byId("submitDialogTextareaRejectAll").getValue().trim() === "") {
+								sErrorFlag = true;
+								sErrorMessage = sErrorMessage + "Please provide the rejection comment. \n";
+								//return;
+							} else {
+								sAllComment = sap.ui.getCore().byId("submitDialogTextareaRejectAll").getValue();
+							}
+						} else {
+
+							// if no selection made
+							if (!sap.ui.getCore().byId("rejectGrowthCB").getSelected() &&
+								!sap.ui.getCore().byId("rejectDevCB").getSelected() &&
+								!sap.ui.getCore().byId("rejectCapCB").getSelected() &&
+								!sap.ui.getCore().byId("rejectRevCB").getSelected()) {
+								sErrorFlag = true;
+								sErrorMessage = sErrorMessage + "Please select atleast one checkbox to reject a process. \n";
+							}
+							// this is the case of specific rejections
+							//Check the checkbox selections for growth
+							if (sap.ui.getCore().byId("rejectGrowthCB").getSelected()) {
+								if (sap.ui.getCore().byId("submitDialogTextareaRejectGrowth").getValue().trim() === "") {
+									sErrorFlag = true;
+									sErrorMessage = sErrorMessage + "Please provide the rejection comment for growth. \n";
+									//return;
+								} else {
+									sGrowthComment = sap.ui.getCore().byId("submitDialogTextareaRejectGrowth").getValue();
+								}
+							}
+							//check the checkbox for development rejections
+							if (sap.ui.getCore().byId("rejectDevCB").getSelected()) {
+								if (sap.ui.getCore().byId("submitDialogTextareaRejectDev").getValue().trim() === "") {
+									sErrorFlag = true;
+									sErrorMessage = sErrorMessage + "Please provide the rejection comment for development. \n";
+									//return;
+								} else {
+									sDevComment = sap.ui.getCore().byId("submitDialogTextareaRejectDev").getValue();
+								}
+							}
+							//check the checkbox for capital rejections
+							if (sap.ui.getCore().byId("rejectCapCB").getSelected()) {
+								if (sap.ui.getCore().byId("submitDialogTextareaRejectCap").getValue().trim() === "") {
+									sErrorFlag = true;
+									sErrorMessage = sErrorMessage + "Please provide the rejection comment for capital. \n";
+									//return;
+								} else {
+									sCapComment = sap.ui.getCore().byId("submitDialogTextareaRejectCap").getValue();
+								}
+							}
+							//check the checkbox for revenue rejections
+							if (sap.ui.getCore().byId("rejectRevCB").getSelected()) {
+								if (sap.ui.getCore().byId("submitDialogTextareaRejectRev").getValue().trim() === "") {
+									sErrorFlag = true;
+									sErrorMessage = sErrorMessage + "Please provide the rejection comment for revenue. \n";
+									//return;
+								} else {
+									sRevComment = sap.ui.getCore().byId("submitDialogTextareaRejectRev").getValue();
+								}
+							}
+						}
+						// check for error flag
+						if (sErrorFlag) {
+							sap.m.MessageToast.show(sErrorMessage);
+							sErrorFlag = false;
+							sErrorMessage = "";
+							return;
+						} else {
+							var sFinalData = that._prepareDataRejection(sData, sAction, sAllComment, sGrowthComment, sDevComment, sCapComment,
+								sRevComment);
+							that._callService(sFinalData, sModel, sBindingElement.getPath());
+							dialog.close();
+						}
+					}
+				}),
+				endButton: new Button({
+					text: 'Cancel',
+					press: function () {
+						dialog.close();
+					}
+				}),
+				afterClose: function () {
+					dialog.destroy();
+				}
+			});
+			dialog.open();
+
+		},
+		_prepareDataRejection: function (sData, sAction, sAllComment, sGrowthComment, sDevComment, sCapComment, sRevComment) {
+			if (sAction === "Approve") {
+				sAction = "A";
+			} else {
+				sAction = "R";
+			}
+			return {
+				DPNumber: sData.DPNumber,
+				WorkitemID: sData.WorkitemID,
+				Version: sData.Version,
+				Comment: sAllComment,
+				Action: sAction,
+				Level: sData.Level,
+				RG_Comment: sGrowthComment,
+				RD_Comment: sDevComment,
+				RC_Comment: sCapComment,
+				RR_Comment: sRevComment
+			};
 		}
 
 	});
